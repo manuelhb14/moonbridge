@@ -13,7 +13,7 @@ export default function AvailableTokens() {
     const [tokens, setTokens] = useState([]);
 
     const onTokenChange = (e) => {
-        setToken(e.target.value);
+        setToken(e.value);
         setProtocol('');
         setIsApproved(false);
         setAmount('');
@@ -83,13 +83,11 @@ export default function AvailableTokens() {
         <Select
             options={tokens}
             onChange={onTokenChange}
-            value={token}
             placeholder="Token"
             formatOptionLabel={(option) => (
                 <div className="select-option">
                     <img src={option.image} height="25px" width="25px" alt="logo" />
                     <span>{option.label}</span>
-                    <span>{option.balance}</span>
                 </div>
             )}
             styles={customStyles}
