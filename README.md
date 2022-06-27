@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# [Polkadot Hackathon](https://polkadot-na.devpost.com)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TODO: Add session 1 timestamps
 
-## Available Scripts
+## Bridge Aggregator
 
-In the project directory, you can run:
+### [Session 2: Bridging the Multichain Future](https://www.crowdcast.io/e/polkadot-hackathon)
 
-### `npm start`
+Useful timestamps:
+00:00 - Introduction
+01:27 - Start
+02:53 - Approaches to Bridging
+07:14 - Moonbeam Approach
+**09:39 - Bridge Aggregator**
+12:50 - Cross-Chain Bridge Txn Explorer
+13:46 - Cross-Chain Explorer [Example](https://anyswap.net/)
+**15:31 - Working with the [Synapse API](https://syn-api-x.herokuapp.com/apidoc)**
+**22:31 - Working with the [Multichain API](https://github.com/anyswap/CrossChain-Bridge/wiki/Bridge-api-for-frontend)**
+28:32 - Build a XCM Explorer [(more info)](https://www.crowdcast.io/e/polkadot-hackathon/1)
+31:25 - Build a XCM-related Tool
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### [Hackathon Prizes & Challenges](https://angelhack.notion.site/Polkadot-Hackathon-North-America-Edition-Participants-Guide-0f6d16e7db4849a9a4902241f0d4a5cf#7760e9aa3f5f4c8f90869504db40c665)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### [Moonbeam Challenges](https://angelhack.notion.site/Polkadot-Hackathon-North-America-Edition-Participants-Guide-0f6d16e7db4849a9a4902241f0d4a5cf#7760e9aa3f5f4c8f90869504db40c665)
 
-### `npm test`
+### Potential Supported Bridges
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Nomad](https://app.nomad.xyz/) [SDK](https://docs.nomad.xyz/dev/sdk.html)
+- [Multichain (Anyswap)](https://app.multichain.org/#/router) [API](https://github.com/anyswap/CrossChain-Bridge/wiki/CrossChain-Bridge-API#restful-api-reference)
+- [Connext](https://bridge.connext.network/?sendingChainId=1284) [SDK](https://docs.connext.network/developers/sdk/sdk-quickstart)
+- [Satellite](https://satellite.money/?source=moonbeam) [SDK](https://docs.axelar.dev/dev/axelarjs-sdk/intro)
+- [Synapse Protocol](https://synapseprotocol.com/) [API](https://syn-api-x.herokuapp.com/apidoc/#api-_header)
+- [Meter Passport](https://passport.meter.io/#/) [API](https://github.com/meterio/meterify#web3-method-supported)
 
-### `npm run build`
+**[Useful bridge endpoints (Postman)](https://go.postman.co/workspace/Moonbeam-Bridge-Aggregator~68b21d5c-33c0-462c-a0a8-76f1cb33b699/collection/8082526-857baefb-97e3-46a8-bff9-b11cae311bf2)**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Examples
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Avalanche Bridge](https://bridge.avax.network/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Useful Information
 
-### `npm run eject`
+- Moonbeam Chain ID: 1284
+- [Synapse Supported Chains](https://github.com/synapsecns/sdk/blob/master/src/common/chainid.ts#L1)
+- [List of Chains](https://chainlist.org/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Requirements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Bridge must be FROM and TO Moonbeam
