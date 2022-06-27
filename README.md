@@ -1,11 +1,14 @@
 # [Polkadot Hackathon](https://polkadot-na.devpost.com)
 
-TODO: Add session 1 timestamps
-
 ## Bridge Aggregator
+
+### [Session 1: Building Cross-Chain DApps with XC-20s](https://www.crowdcast.io/e/polkadot-hackathon/1)
+
+TODO: Add session 1 timestamps
 
 ### [Session 2: Bridging the Multichain Future](https://www.crowdcast.io/e/polkadot-hackathon)
 
+TODO: Add session 1 timestamps
 Useful timestamps:
 00:00 - Introduction
 
