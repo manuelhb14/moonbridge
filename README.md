@@ -8,15 +8,25 @@ TODO: Add session 1 timestamps
 
 Useful timestamps:
 00:00 - Introduction
+
 01:27 - Start
+
 02:53 - Approaches to Bridging
+
 07:14 - Moonbeam Approach
+
 **09:39 - Bridge Aggregator**
+
 12:50 - Cross-Chain Bridge Txn Explorer
+
 13:46 - Cross-Chain Explorer [Example](https://anyswap.net/)
+
 **15:31 - Working with the [Synapse API](https://syn-api-x.herokuapp.com/apidoc)**
+
 **22:31 - Working with the [Multichain API](https://github.com/anyswap/CrossChain-Bridge/wiki/Bridge-api-for-frontend)**
+
 28:32 - Build a XCM Explorer [(more info)](https://www.crowdcast.io/e/polkadot-hackathon/1)
+
 31:25 - Build a XCM-related Tool
 
 #### [Hackathon Prizes & Challenges](https://angelhack.notion.site/Polkadot-Hackathon-North-America-Edition-Participants-Guide-0f6d16e7db4849a9a4902241f0d4a5cf#7760e9aa3f5f4c8f90869504db40c665)
