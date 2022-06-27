@@ -1,12 +1,14 @@
-# [Polkadot Hackathon](https://polkadot-na.devpost.com)
+# Moonbeam Bridge Aggregator
 
-## Bridge Aggregator
+Moonbeam Bridge Aggregator project for Polkadot Hackathon: North America Edition. Supported bridges include:
 
-### [Session 1: Building Cross-Chain DApps with XC-20s](https://www.crowdcast.io/e/polkadot-hackathon/1)
+- [Multichain (Anyswap)](https://app.multichain.org/#/router) - [API](https://github.com/anyswap/CrossChain-Bridge/wiki/CrossChain-Bridge-API#restful-api-reference)
+
+## [Session 1: Building Cross-Chain DApps with XC-20s](https://www.crowdcast.io/e/polkadot-hackathon/1)
 
 TODO: Add session 1 timestamps
 
-### [Session 2: Bridging the Multichain Future](https://www.crowdcast.io/e/polkadot-hackathon)
+## [Session 2: Bridging the Multichain Future](https://www.crowdcast.io/e/polkadot-hackathon)
 
 TODO: Add session 1 timestamps
 Useful timestamps:
@@ -32,11 +34,11 @@ Useful timestamps:
 
 31:25 - Build a XCM-related Tool
 
-#### [Hackathon Prizes & Challenges](https://angelhack.notion.site/Polkadot-Hackathon-North-America-Edition-Participants-Guide-0f6d16e7db4849a9a4902241f0d4a5cf#7760e9aa3f5f4c8f90869504db40c665)
+### [Hackathon Prizes & Challenges](https://angelhack.notion.site/Polkadot-Hackathon-North-America-Edition-Participants-Guide-0f6d16e7db4849a9a4902241f0d4a5cf#7760e9aa3f5f4c8f90869504db40c665)
 
-#### [Moonbeam Challenges](https://angelhack.notion.site/Polkadot-Hackathon-North-America-Edition-Participants-Guide-0f6d16e7db4849a9a4902241f0d4a5cf#7760e9aa3f5f4c8f90869504db40c665)
+### [Moonbeam Challenges](https://angelhack.notion.site/Polkadot-Hackathon-North-America-Edition-Participants-Guide-0f6d16e7db4849a9a4902241f0d4a5cf#7760e9aa3f5f4c8f90869504db40c665)
 
-### Potential Supported Bridges
+## Potential Supported Bridges
 
 - [Nomad](https://app.nomad.xyz/) - [SDK](https://docs.nomad.xyz/dev/sdk.html)
 - [Multichain (Anyswap)](https://app.multichain.org/#/router) - [API](https://github.com/anyswap/CrossChain-Bridge/wiki/CrossChain-Bridge-API#restful-api-reference)
@@ -47,16 +49,16 @@ Useful timestamps:
 
 **[Useful bridge endpoints (Postman)](https://go.postman.co/workspace/Moonbeam-Bridge-Aggregator~68b21d5c-33c0-462c-a0a8-76f1cb33b699/collection/8082526-857baefb-97e3-46a8-bff9-b11cae311bf2)**
 
-### Examples
+## Examples
 
 - [Avalanche Bridge](https://bridge.avax.network/)
 
-### Useful Information
+## Useful Information
 
 - Moonbeam Chain ID: 1284
 - [Synapse Supported Chains](https://github.com/synapsecns/sdk/blob/master/src/common/chainid.ts#L1)
 - [List of Chains](https://chainlist.org/)
 
-### Requirements
+## Requirements
 
 - Bridge must be FROM and TO Moonbeam
