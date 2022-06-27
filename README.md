@@ -35,12 +35,12 @@ Useful timestamps:
 
 ### Potential Supported Bridges
 
-- [Nomad](https://app.nomad.xyz/) [SDK](https://docs.nomad.xyz/dev/sdk.html)
-- [Multichain (Anyswap)](https://app.multichain.org/#/router) [API](https://github.com/anyswap/CrossChain-Bridge/wiki/CrossChain-Bridge-API#restful-api-reference)
-- [Connext](https://bridge.connext.network/?sendingChainId=1284) [SDK](https://docs.connext.network/developers/sdk/sdk-quickstart)
-- [Satellite](https://satellite.money/?source=moonbeam) [SDK](https://docs.axelar.dev/dev/axelarjs-sdk/intro)
-- [Synapse Protocol](https://synapseprotocol.com/) [API](https://syn-api-x.herokuapp.com/apidoc/#api-_header)
-- [Meter Passport](https://passport.meter.io/#/) [API](https://github.com/meterio/meterify#web3-method-supported)
+- [Nomad](https://app.nomad.xyz/) - [SDK](https://docs.nomad.xyz/dev/sdk.html)
+- [Multichain (Anyswap)](https://app.multichain.org/#/router) - [API](https://github.com/anyswap/CrossChain-Bridge/wiki/CrossChain-Bridge-API#restful-api-reference)
+- [Connext](https://bridge.connext.network/?sendingChainId=1284) - [SDK](https://docs.connext.network/developers/sdk/sdk-quickstart)
+- [Satellite](https://satellite.money/?source=moonbeam) - [SDK](https://docs.axelar.dev/dev/axelarjs-sdk/intro)
+- [Synapse Protocol](https://synapseprotocol.com/) - [API](https://syn-api-x.herokuapp.com/apidoc/#api-_header)
+- [Meter Passport](https://passport.meter.io/#/) - [API](https://github.com/meterio/meterify#web3-method-supported)
 
 **[Useful bridge endpoints (Postman)](https://go.postman.co/workspace/Moonbeam-Bridge-Aggregator~68b21d5c-33c0-462c-a0a8-76f1cb33b699/collection/8082526-857baefb-97e3-46a8-bff9-b11cae311bf2)**
 
