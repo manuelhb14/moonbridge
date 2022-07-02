@@ -10,7 +10,7 @@ function App() {
     const [amount, setAmount] = useState(0);
     const [expectedAmount, setExpectedAmount] = useState(0);
     const [data, setData] = useState([]);
-    const [fees, setFees] = useState(0);
+    const [fees, setFees] = useState(0.99);
     const [protocol, setProtocol] = useState('');
     const [contractInfo, setContractInfo] = useState(null);
     const [networks, setNetworks] = useState({
@@ -37,7 +37,8 @@ function App() {
         if (protocol === '') {
             setExpectedAmount(amount);
         } else { 
-            setExpectedAmount(amount * 0.01);
+            setExpectedAmount(amount * 0.99);
+            setFees(amount * 0.01);
         }
     }
     , [amount, protocol]);
@@ -115,7 +116,7 @@ function App() {
                     {data.filter((item) => (item.srcChainID === from || item.srcChainID === to) && item.symbol === token)
                     // .filter((item, index, self) => self.findIndex(item2 => (item2.protocol === item.protocol)) === index)
                     .map((item) => {
-                        return <option key={item.bridge} value={item.bridge}>{item.bridge}</option>
+                        return <option key={item.bridge} value={item.bridge}>{item.bridge} <span>{fees}</span></option>
                     }
                     )}
                 </select>
