@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import './App.css';
 
-import response from './response';
+import response from './constants/response';
 
 import { DataContext } from './context/DataContext';
 
