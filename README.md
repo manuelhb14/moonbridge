@@ -62,3 +62,9 @@ Useful timestamps:
 ## Requirements
 
 - Bridge must be FROM and TO Moonbeam
+
+## Future Plans
+
+- Add more bridges
+- Token swap support
+- Add useful popup alerts
