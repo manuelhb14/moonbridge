@@ -6,7 +6,6 @@ export default function AvailableNetworks({value}) {
 
     const { networks, to, setTo, from, setFrom } = useContext(DataContext);
 
-    console.log(value);
     return (
         <>
         { ( value === "from") ?
