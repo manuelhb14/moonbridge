@@ -13,6 +13,7 @@ export const DataProvider = ({ children }) => {
     const [fees, setFees] = useState(0.99);
     const [protocol, setProtocol] = useState('');
     const [contractInfo, setContractInfo] = useState(null);
+    const [isConnected, setIsConnected] = useState(false);
     const [networks, setNetworks] = useState({
         "288": "Boba",
         "1": "Ethereum",
@@ -29,7 +30,7 @@ export const DataProvider = ({ children }) => {
     });
 
     return (
-        <DataContext.Provider value={{ from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, contractInfo, setContractInfo, networks, setNetworks }}>
+        <DataContext.Provider value={{ from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, contractInfo, setContractInfo, networks, setNetworks, isConnected, setIsConnected }}>
             {children}
         </DataContext.Provider>
     );
