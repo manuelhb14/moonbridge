@@ -5,7 +5,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn1Synapse",
+        "pairid": "syn1Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -45,7 +45,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -121,7 +121,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -157,7 +157,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn10Synapse",
+        "pairid": "syn10Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -197,7 +197,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -233,7 +233,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
-        "pairId": "gohm10Synapse",
+        "pairid": "gohm10Synapse",
         "SrcToken": {
             "Name": "Olympus DAO",
             "Symbol": "gOHM",
@@ -273,7 +273,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -309,7 +309,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn25Synapse",
+        "pairid": "syn25Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -349,7 +349,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -385,7 +385,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
-        "pairId": "gohm25Synapse",
+        "pairid": "gohm25Synapse",
         "SrcToken": {
             "Name": "Olympus DAO",
             "Symbol": "gOHM",
@@ -425,7 +425,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -461,7 +461,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn56Synapse",
+        "pairid": "syn56Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -501,7 +501,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -537,7 +537,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
-        "pairId": "gohm56Synapse",
+        "pairid": "gohm56Synapse",
         "SrcToken": {
             "Name": "Olympus DAO",
             "Symbol": "gOHM",
@@ -577,7 +577,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -613,7 +613,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn137Synapse",
+        "pairid": "syn137Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -653,7 +653,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -689,7 +689,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
-        "pairId": "gohm137Synapse",
+        "pairid": "gohm137Synapse",
         "SrcToken": {
             "Name": "Olympus DAO",
             "Symbol": "gOHM",
@@ -729,7 +729,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -765,7 +765,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn250Synapse",
+        "pairid": "syn250Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -805,7 +805,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -841,7 +841,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
-        "pairId": "gohm250Synapse",
+        "pairid": "gohm250Synapse",
         "SrcToken": {
             "Name": "Olympus DAO",
             "Symbol": "gOHM",
@@ -881,7 +881,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -917,7 +917,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn288Synapse",
+        "pairid": "syn288Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -957,7 +957,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -993,7 +993,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
-        "pairId": "gohm288Synapse",
+        "pairid": "gohm288Synapse",
         "SrcToken": {
             "Name": "Olympus DAO",
             "Symbol": "gOHM",
@@ -1033,7 +1033,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1069,7 +1069,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn1088Synapse",
+        "pairid": "syn1088Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -1109,7 +1109,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1145,7 +1145,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
-        "pairId": "gohm1088Synapse",
+        "pairid": "gohm1088Synapse",
         "SrcToken": {
             "Name": "Olympus DAO",
             "Symbol": "gOHM",
@@ -1185,7 +1185,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1221,7 +1221,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn1285Synapse",
+        "pairid": "syn1285Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -1261,7 +1261,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1297,7 +1297,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
-        "pairId": "gohm1285Synapse",
+        "pairid": "gohm1285Synapse",
         "SrcToken": {
             "Name": "Olympus DAO",
             "Symbol": "gOHM",
@@ -1337,7 +1337,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1373,7 +1373,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Vested SolarBeam",
         "symbol": "veSOLAR",
-        "pairId": "vesolar1285Synapse",
+        "pairid": "vesolar1285Synapse",
         "SrcToken": {
             "Name": "Vested SolarBeam",
             "Symbol": "veSOLAR",
@@ -1413,7 +1413,7 @@ const response  = [
             "Symbol": "veSOLAR",
             "ContractAddress": "0x0DB6729C03C85B0708166cA92801BcB5CAc781fC",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1449,7 +1449,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Moonriver",
         "symbol": "MOVR",
-        "pairId": "movr1285Synapse",
+        "pairid": "movr1285Synapse",
         "SrcToken": {
             "Name": "Moonriver",
             "Symbol": "MOVR",
@@ -1489,7 +1489,7 @@ const response  = [
             "Symbol": "wMOVR",
             "ContractAddress": "0x1d4C2a246311bB9f827F4C768e277FF5787B7D7E",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1525,7 +1525,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn42161Synapse",
+        "pairid": "syn42161Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -1565,7 +1565,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1601,7 +1601,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
-        "pairId": "gohm42161Synapse",
+        "pairid": "gohm42161Synapse",
         "SrcToken": {
             "Name": "Olympus DAO",
             "Symbol": "gOHM",
@@ -1641,7 +1641,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1677,7 +1677,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Synapse",
         "symbol": "SYN",
-        "pairId": "syn43114Synapse",
+        "pairid": "syn43114Synapse",
         "SrcToken": {
             "Name": "Synapse",
             "Symbol": "SYN",
@@ -1717,7 +1717,7 @@ const response  = [
             "Symbol": "SYN",
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1753,7 +1753,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
-        "pairId": "gohm43114Synapse",
+        "pairid": "gohm43114Synapse",
         "SrcToken": {
             "Name": "Olympus DAO",
             "Symbol": "gOHM",
@@ -1793,7 +1793,7 @@ const response  = [
             "Symbol": "gOHM",
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -1829,7 +1829,7 @@ const response  = [
         "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
         "name": "Avalanche",
         "symbol": "AVAX",
-        "pairId": "avax43114Synapse",
+        "pairid": "avax43114Synapse",
         "SrcToken": {
             "Name": "Avalanche",
             "Symbol": "AVAX",
@@ -1869,7 +1869,7 @@ const response  = [
             "Symbol": "wAVAX",
             "ContractAddress": "0xA1f8890E39b4d8E33efe296D698fe42Fb5e59cC3",
             "Decimals": 18,
-            "contractInfo": {
+            "ContractInfo": {
                 "swapFee": {
                     "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
@@ -2544,5 +2544,4 @@ const response  = [
         "bridge": "Multichain"
     }
 ]
-
 export default response;

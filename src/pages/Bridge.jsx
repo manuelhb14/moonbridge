@@ -24,7 +24,7 @@ export default function Bridge() {
         } else { 
             setExpectedAmount(amount * 0.99);
             setFees(amount * 0.01);
-            if (from !== "1284") {
+            if (from !== process.env.REACT_APP_MOONBEAM_CHAIN_ID) {
                 setContractInfo(data.filter(item => item.bridge === protocol && item.symbol === token && item.srcChainID === from)[0].SrcToken.ContractInfo);
             } else {
                 setContractInfo(data.filter(item => item.bridge === protocol && item.symbol === token && item.srcChainID === to)[0].DestToken.ContractInfo);

@@ -5,7 +5,7 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
 
     const [from, setFrom] = useState("1");
-    const [to, setTo] = useState("1284");
+    const [to, setTo] = useState(process.env.REACT_APP_MOONBEAM_CHAIN_ID);
     const [token, setToken] = useState('');
     const [amount, setAmount] = useState(0);
     const [expectedAmount, setExpectedAmount] = useState(0);

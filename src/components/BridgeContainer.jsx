@@ -8,6 +8,11 @@ import ExpectedAmount from "./ExpectedAmount";
 import AvailableProtocols from "./AvailableProtocols";
 
 export default function BridgeContainer() {
+
+    const transfer = () => {
+        console.log("transfer");
+    }
+    
     return (
         <div className="bridge-container">
             <AvailableNetworks value="from" />
@@ -24,7 +29,7 @@ export default function BridgeContainer() {
 
             <AvailableProtocols />
 
-            <button id="convert">Transfer</button>
+            <button id="convert" onClick={transfer}>Convert</button>
         </div>
     )
 }

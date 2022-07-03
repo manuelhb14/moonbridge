@@ -8,7 +8,7 @@ export default function AvailableTokens() {
     return (
         <select name="token" id="token" onChange={(e) => setToken(e.target.value)} value={token}>
             <option value="">Token</option>
-            {from !== "1284" ?
+            {from !== process.env.REACT_APP_MOONBEAM_CHAIN_ID ?
             (
             data.filter((item) => item.srcChainID === from)
                 .filter((item, index, self) => self.findIndex(item2 => (item2.SrcToken.Symbol === item.SrcToken.Symbol)) === index)

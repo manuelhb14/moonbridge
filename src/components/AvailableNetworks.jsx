@@ -6,14 +6,16 @@ export default function AvailableNetworks({value}) {
 
     const { networks, to, setTo, from, setFrom } = useContext(DataContext);
 
+    const moonbeamChainID = process.env.REACT_APP_MOONBEAM_CHAIN_ID;
+
     return (
         <>
         { ( value === "from") ?
             <select name="from" id="from" onChange={(e) => setFrom(e.target.value)} value={from}>
                 {Object.keys(networks).map((key) => {
-                    if (from !== "1284" && key !== "1284") {
+                    if (from !== moonbeamChainID && key !== moonbeamChainID) {
                         return <option key={key} value={key}>{networks[key]}</option>
-                    } else if (from === "1284" && key === "1284") {
+                    } else if (from === moonbeamChainID && key === moonbeamChainID) {
                         return <option key={key} value={key}>{networks[key]}</option>
                     }
                 }
@@ -22,9 +24,9 @@ export default function AvailableNetworks({value}) {
             :
             <select name="to" id="to" onChange={(e) => setTo(e.target.value)} value={to}>
                 {Object.keys(networks).map((key) => {
-                    if (to !== "1284" && key !== "1284") {
+                    if (to !== moonbeamChainID && key !== moonbeamChainID) {
                         return <option key={key} value={key}>{networks[key]}</option>
-                    } else if (to === "1284" && key === "1284") {
+                    } else if (to === moonbeamChainID && key === moonbeamChainID) {
                         return <option key={key} value={key}>{networks[key]}</option>
                     }
                 }
