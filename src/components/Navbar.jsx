@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "../context/DataContext";
+// import React from "../../public/assets/imgs/logos"
 
 export default function Navbar() {
 
@@ -46,7 +47,7 @@ export default function Navbar() {
 
     return (
         <div className="navbar">
-            <img src="" alt="Moonbeam logo" />
+            <img src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" />
             <a href=""> Bridge </a>
             <a href=""> Explorer </a>
             <a href=""> Products </a>
