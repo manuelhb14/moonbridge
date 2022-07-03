@@ -24,9 +24,14 @@ export default function Bridge() {
         } else { 
             setExpectedAmount(amount * 0.99);
             setFees(amount * 0.01);
+            if (from !== "1284") {
+                setContractInfo(data.filter(item => item.bridge === protocol && item.symbol === token && item.srcChainID === from)[0].SrcToken.ContractInfo);
+            } else {
+                setContractInfo(data.filter(item => item.bridge === protocol && item.symbol === token && item.srcChainID === to)[0].DestToken.ContractInfo);
+            }
         }
     }
-    , [amount, protocol]);
+    , [from, to, token, amount, protocol]);
 
     return (
         <div className="bridge">
