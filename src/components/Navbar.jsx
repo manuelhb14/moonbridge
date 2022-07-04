@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "../context/DataContext";
+import { NavLink, Router, Routes, Route } from "react-router-dom";
 
 export default function Navbar() {
 
@@ -45,23 +46,35 @@ export default function Navbar() {
     }
 
     return (
-        <div className="navbar">
-            <img src="" alt="Moonbeam logo" />
-            <a href=""> Bridge </a>
-            <a href=""> Explorer </a>
-            <a href=""> Products </a>
-            <a href=""> Docs </a>
-            {isConnected ? (
-                <div className="account">
-                    <button>Account: {formatAddress(account)}</button>
-                    <button onClick={disconnect}>Disconnect</button>
-                </div>
-            ) : (
-                <div className="account">
-                    <button onClick={connect}>Connect</button>
-                </div>
-            )
-            }
-        </div>
+        <nav className="navbar nav-text">
+            <NavLink to="/"><img src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" /></NavLink>
+            <ul>
+                <li>
+                    <NavLink to="/bridge" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/explorer" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Explorer </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/" id="product-nav" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Product </NavLink>
+                </li>
+                <li>
+                    <a href="/"> Docs </a>
+                </li>
+                <li>
+                {isConnected ? (
+                    <div className="account">
+                        <button className="button-a">Account: {formatAddress(account)}</button>
+                        <button onClick={disconnect}>Disconnect</button>
+                    </div>
+                ) : (
+                    <div className="account">
+                        <button className="button-a" onClick={connect}>Connect</button>
+                    </div>
+                )
+                }
+                </li>
+            </ul>   
+        </nav>
     );
 }
