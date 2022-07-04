@@ -1,16 +1,24 @@
 import React from 'react';
-import './App.css';
+
+import Home from './pages/Home';
+import Bridge from './pages/Bridge';
+import Explorer from './pages/Explorer';
 
 import Navbar from './components/Navbar';
-import Bridge from './pages/Bridge';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
         
     return (
-        <div className="App">
+        <Router>
             <Navbar />
-            <Bridge />
-        </div>
+                <Routes>
+                    <Route path="/" element={ <Home /> } />
+                    <Route path="/bridge" element={ <Bridge /> } />
+                    <Route path="/explorer" element={ <Explorer /> } />
+                    <Route path="/" element={ <Home /> } />
+                </Routes>
+        </Router>
     );
 }
 

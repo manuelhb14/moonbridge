@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "../context/DataContext";
-// import React from "../../public/assets/imgs/logos"
+import { NavLink, Router, Routes, Route } from "react-router-dom";
 
 export default function Navbar() {
 
@@ -47,12 +47,20 @@ export default function Navbar() {
 
     return (
         <nav className="navbar">
-            <a href=""><img src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" /></a>
+            <NavLink to="/"><img src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" /></NavLink>
             <ul>
-                <li className="active"><a href="/bridge"> Bridge </a></li>
-                <li><a href=""> Explorer </a></li>
-                <li><a href=""> Products </a></li>
-                <li><a href=""> Docs </a></li>
+                <li className="active">
+                    <NavLink to="/bridge" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/explorer" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Explorer </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/" id="product-nav" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Product </NavLink>
+                </li>
+                <li>
+                    <a href="/"> Docs </a>
+                </li>
                 <li>
                 {isConnected ? (
                     <div className="account">
