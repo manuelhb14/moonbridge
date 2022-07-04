@@ -1,12 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { DataContext } from "../context/DataContext";
 
 export default function AvailableTokens() {
-    const { from, to, token, setToken, data } = useContext(DataContext);
+    const { from, to, token, setToken, data, setProtocol } = useContext(DataContext);
+
+    const onTokenChange = (e) => {
+        setToken(e.target.value);
+        setProtocol('');
+    }
 
     return (
-        <select name="token" id="token" onChange={(e) => setToken(e.target.value)} value={token}>
+        <select name="token" id="token" onChange={onTokenChange} value={token}>
             <option value="">Token</option>
             {from !== process.env.REACT_APP_MOONBEAM_CHAIN_ID ?
             (

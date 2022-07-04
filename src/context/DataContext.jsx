@@ -7,14 +7,14 @@ export const DataProvider = ({ children }) => {
     const [from, setFrom] = useState("1");
     const [to, setTo] = useState(process.env.REACT_APP_MOONBEAM_CHAIN_ID);
     const [token, setToken] = useState('');
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState('');
     const [expectedAmount, setExpectedAmount] = useState(0);
     const [data, setData] = useState([]);
-    const [fees, setFees] = useState(0.99);
+    const [fees, setFees] = useState(0);
     const [protocol, setProtocol] = useState('');
-    const [contractInfo, setContractInfo] = useState(null);
     const [isConnected, setIsConnected] = useState(false);
     const [account, setAccount] = useState('');
+    const [tokenInfo, setTokenInfo] = useState(null);
     const [networks, setNetworks] = useState({
         // TODO: get from endpoint instead of hardcoded
         "288": "Boba",
@@ -32,7 +32,7 @@ export const DataProvider = ({ children }) => {
     });
 
     return (
-        <DataContext.Provider value={{ from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, contractInfo, setContractInfo, networks, setNetworks, isConnected, setIsConnected, account, setAccount }}> 
+        <DataContext.Provider value={{ from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, networks, setNetworks, isConnected, setIsConnected, account, setAccount, tokenInfo, setTokenInfo }}>
             {children}
         </DataContext.Provider>
     );

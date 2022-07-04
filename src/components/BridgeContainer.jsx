@@ -6,6 +6,7 @@ import InputAmount from "./InputAmount";
 import AvailableTokens from "./AvailableTokens";
 import ExpectedAmount from "./ExpectedAmount";
 import AvailableProtocols from "./AvailableProtocols";
+import Fees from "./Fees";
 
 export default function BridgeContainer() {
 
@@ -30,6 +31,8 @@ export default function BridgeContainer() {
             <AvailableProtocols />
 
             <button id="convert" onClick={transfer}>Convert</button>
+
+            <Fees />
         </div>
     )
 }

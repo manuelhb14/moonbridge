@@ -13,7 +13,7 @@ const response  = [
             "ContractAddress": "0x0f2d719407fdbeff09d87557abb7232601fd9f29",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -28,7 +28,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1",
                         "toChain": "1284",
@@ -46,23 +46,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "1",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "1",
@@ -89,7 +89,7 @@ const response  = [
             "ContractAddress": "0x0ab87046fBb341D058F17CBC4c1133F25a20a52f",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -104,7 +104,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1",
                         "toChain": "1284",
@@ -122,23 +122,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "1",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "1",
@@ -165,7 +165,7 @@ const response  = [
             "ContractAddress": "0x5A5fFf6F753d7C11A56A52FE47a177a87e431655",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "10",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -180,7 +180,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "10",
                         "toChain": "1284",
@@ -198,23 +198,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "10",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "10",
@@ -241,7 +241,7 @@ const response  = [
             "ContractAddress": "0x0b5740c6b4a97f90eF2F0220651Cca420B868FfB",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "10",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -256,7 +256,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "10",
                         "toChain": "1284",
@@ -274,23 +274,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "10",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "10",
@@ -317,7 +317,7 @@ const response  = [
             "ContractAddress": "0xFD0F80899983b8D46152aa1717D76cba71a31616",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "25",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -332,7 +332,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "25",
                         "toChain": "1284",
@@ -350,23 +350,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "25",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "25",
@@ -393,7 +393,7 @@ const response  = [
             "ContractAddress": "0xbB0A63A6CA2071c6C4bcAC11a1A317b20E3E999C",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "25",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -408,7 +408,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "25",
                         "toChain": "1284",
@@ -426,23 +426,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "25",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "25",
@@ -469,7 +469,7 @@ const response  = [
             "ContractAddress": "0xa4080f1778e69467e905b8d6f72f6e441f9e9484",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "56",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -484,7 +484,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "56",
                         "toChain": "1284",
@@ -502,23 +502,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "56",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "56",
@@ -545,7 +545,7 @@ const response  = [
             "ContractAddress": "0x88918495892BAF4536611E38E75D771Dc6Ec0863",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "56",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -560,7 +560,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "56",
                         "toChain": "1284",
@@ -578,23 +578,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "56",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "56",
@@ -621,7 +621,7 @@ const response  = [
             "ContractAddress": "0xf8f9efc0db77d8881500bb06ff5d6abc3070e695",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "137",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -636,7 +636,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "137",
                         "toChain": "1284",
@@ -654,23 +654,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "137",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "137",
@@ -697,7 +697,7 @@ const response  = [
             "ContractAddress": "0xd8cA34fd379d9ca3C6Ee3b3905678320F5b45195",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "137",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -712,7 +712,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "137",
                         "toChain": "1284",
@@ -730,23 +730,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "137",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "137",
@@ -773,7 +773,7 @@ const response  = [
             "ContractAddress": "0xE55e19Fb4F2D85af758950957714292DAC1e25B2",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "250",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -788,7 +788,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "250",
                         "toChain": "1284",
@@ -806,23 +806,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "250",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "250",
@@ -849,7 +849,7 @@ const response  = [
             "ContractAddress": "0x91fa20244Fb509e8289CA630E5db3E9166233FDc",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "250",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -864,7 +864,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "250",
                         "toChain": "1284",
@@ -882,23 +882,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "250",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "250",
@@ -925,7 +925,7 @@ const response  = [
             "ContractAddress": "0xb554A55358fF0382Fb21F0a478C3546d1106Be8c",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "288",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -940,7 +940,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "288",
                         "toChain": "1284",
@@ -958,23 +958,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "288",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "288",
@@ -1001,7 +1001,7 @@ const response  = [
             "ContractAddress": "0xd22C0a4Af486C7FA08e282E9eB5f30F9AaA62C95",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "288",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -1016,7 +1016,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "288",
                         "toChain": "1284",
@@ -1034,23 +1034,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "288",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "288",
@@ -1077,7 +1077,7 @@ const response  = [
             "ContractAddress": "0x67C10C397dD0Ba417329543c1a40eb48AAa7cd00",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1088",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -1092,7 +1092,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1088",
                         "toChain": "1284",
@@ -1110,23 +1110,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "1088",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "1088",
@@ -1153,7 +1153,7 @@ const response  = [
             "ContractAddress": "0xFB21B70922B9f6e3C6274BcD6CB1aa8A0fe20B80",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1088",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -1168,7 +1168,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1088",
                         "toChain": "1284",
@@ -1186,23 +1186,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "1088",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "1088",
@@ -1229,7 +1229,7 @@ const response  = [
             "ContractAddress": "0xd80d8688b02B3FD3afb81cDb124F188BB5aD0445",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1285",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -1244,7 +1244,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1285",
                         "toChain": "1284",
@@ -1262,23 +1262,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "1285",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "1285",
@@ -1305,7 +1305,7 @@ const response  = [
             "ContractAddress": "0x3bF21Ce864e58731B6f28D68d5928BcBEb0Ad172",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1285",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -1320,7 +1320,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1285",
                         "toChain": "1284",
@@ -1338,23 +1338,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "1285",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "1285",
@@ -1381,7 +1381,7 @@ const response  = [
             "ContractAddress": "0x76906411D07815491A5E577022757aD941fb5066",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1285",
                     "toChain": "1284",
                     "fromToken": "veSOLAR",
@@ -1396,7 +1396,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1285",
                         "toChain": "1284",
@@ -1414,23 +1414,23 @@ const response  = [
             "ContractAddress": "0x0DB6729C03C85B0708166cA92801BcB5CAc781fC",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "1285",
                     "fromToken": "veSOLAR",
                     "toToken": "veSOLAR",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "veSOLAR"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "1285",
@@ -1457,11 +1457,11 @@ const response  = [
             "ContractAddress": "",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1285",
                     "toChain": "1284",
                     "fromToken": "MOVR",
-                    "toToken": "MOVR",
+                    "toToken": "wMOVR",
                     "amountFrom": ""
                 },
                 "BridgeApproval": {
@@ -1472,12 +1472,12 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1285",
                         "toChain": "1284",
                         "fromToken": "MOVR",
-                        "toToken": "MOVR",
+                        "toToken": "wMOVR",
                         "amountFrom": "",
                         "addressTo": ""
                     }
@@ -1490,27 +1490,27 @@ const response  = [
             "ContractAddress": "0x1d4C2a246311bB9f827F4C768e277FF5787B7D7E",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "1285",
-                    "fromToken": "MOVR",
+                    "fromToken": "wMOVR",
                     "toToken": "MOVR",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
-                        "fromToken": "MOVR"
+                        "fromToken": "wMOVR"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "1285",
-                        "fromToken": "MOVR",
+                        "fromToken": "wMOVR",
                         "toToken": "MOVR",
                         "amountFrom": "",
                         "addressTo": ""
@@ -1533,7 +1533,7 @@ const response  = [
             "ContractAddress": "0x080f6aed32fc474dd5717105dba5ea57268f46eb",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "42161",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -1548,7 +1548,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "42161",
                         "toChain": "1284",
@@ -1566,23 +1566,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "42161",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "42161",
@@ -1609,7 +1609,7 @@ const response  = [
             "ContractAddress": "0x8D9bA570D6cb60C7e3e0F31343Efe75AB8E65FB1",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "42161",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -1624,7 +1624,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "42161",
                         "toChain": "1284",
@@ -1642,23 +1642,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "42161",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "42161",
@@ -1685,7 +1685,7 @@ const response  = [
             "ContractAddress": "0x1f1E7c893855525b303f99bDF5c3c05Be09ca251",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "43114",
                     "toChain": "1284",
                     "fromToken": "SYN",
@@ -1700,7 +1700,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "43114",
                         "toChain": "1284",
@@ -1718,23 +1718,23 @@ const response  = [
             "ContractAddress": "0xF44938b0125A6662f9536281aD2CD6c499F22004",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "43114",
                     "fromToken": "SYN",
                     "toToken": "SYN",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "SYN"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "43114",
@@ -1761,7 +1761,7 @@ const response  = [
             "ContractAddress": "0x321E7092a180BB43555132ec53AaA65a5bF84251",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "43114",
                     "toChain": "1284",
                     "fromToken": "gOHM",
@@ -1776,7 +1776,7 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "43114",
                         "toChain": "1284",
@@ -1794,23 +1794,23 @@ const response  = [
             "ContractAddress": "0xD2666441443DAa61492FFe0F37717578714a4521",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "43114",
                     "fromToken": "gOHM",
                     "toToken": "gOHM",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
                         "fromToken": "gOHM"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "43114",
@@ -1837,11 +1837,11 @@ const response  = [
             "ContractAddress": "",
             "ContractInfo": {
                 "SwapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "43114",
                     "toChain": "1284",
                     "fromToken": "AVAX",
-                    "toToken": "AVAX",
+                    "toToken": "wAVAX",
                     "amountFrom": ""
                 },
                 "BridgeApproval": {
@@ -1852,12 +1852,12 @@ const response  = [
                     }
                 },
                 "BridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "43114",
                         "toChain": "1284",
                         "fromToken": "AVAX",
-                        "toToken": "AVAX",
+                        "toToken": "wAVAX",
                         "amountFrom": "",
                         "addressTo": ""
                     }
@@ -1870,27 +1870,27 @@ const response  = [
             "ContractAddress": "0xA1f8890E39b4d8E33efe296D698fe42Fb5e59cC3",
             "Decimals": 18,
             "ContractInfo": {
-                "swapFee": {
-                    "baseUrl": "http://syn-api-x.herokuapp.com/v1/estimate_bridge_output",
+                "SwapFee": {
+                    "baseUrl": "http://syn-api-dev.herokuapp.com/v1/estimate_bridge_output",
                     "fromChain": "1284",
                     "toChain": "43114",
-                    "fromToken": "AVAX",
+                    "fromToken": "wAVAX",
                     "toToken": "AVAX",
                     "amountFrom": ""
                 },
-                "bridgeApproval": {
+                "BridgeApproval": {
                     "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
                     "params": {
                         "fromChain": "1284",
-                        "fromToken": "AVAX"
+                        "fromToken": "wAVAX"
                     }
                 },
-                "bridgeTransaction": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_txn",
+                "BridgeTransaction": {
+                    "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
                     "params": {
                         "fromChain": "1284",
                         "toChain": "43114",
-                        "fromToken": "AVAX",
+                        "fromToken": "wAVAX",
                         "toToken": "AVAX",
                         "amountFrom": "",
                         "addressTo": ""
@@ -2544,4 +2544,5 @@ const response  = [
         "bridge": "Multichain"
     }
 ]
+
 export default response;

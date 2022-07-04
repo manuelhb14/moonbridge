@@ -9,7 +9,7 @@ import response from "../constants/response";
 
 export default function Bridge() {
 
-    const { from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, contractInfo, setContractInfo, networks, setNetworks } = useContext(DataContext);
+    const { from, to, token, amount, setExpectedAmount, data, setData, protocol, setTokenInfo } = useContext(DataContext);
 
     useEffect(() => {
         const data = response;
@@ -18,20 +18,20 @@ export default function Bridge() {
     , []);
 
     useEffect(() => {
-        if (protocol === '') {
-            setExpectedAmount(amount);
-            setFees(0);
-        } else { 
-            setExpectedAmount(amount * 0.99);
-            setFees(amount * 0.01);
-            if (from !== process.env.REACT_APP_MOONBEAM_CHAIN_ID) {
-                setContractInfo(data.filter(item => item.bridge === protocol && item.symbol === token && item.srcChainID === from)[0].SrcToken.ContractInfo);
-            } else {
-                setContractInfo(data.filter(item => item.bridge === protocol && item.symbol === token && item.srcChainID === to)[0].DestToken.ContractInfo);
-            }
+        if (amount === '') {
+            setExpectedAmount(0);
         }
     }
-    , [from, to, token, amount, protocol]);
+    , [amount]);
+
+    useEffect(() => {
+        if (from !== process.env.REACT_APP_MOONBEAM_CHAIN_ID) {
+            setTokenInfo(data.filter((item) => item.srcChainID === from && item.SrcToken.Symbol === token && item.bridge === protocol)[0]);
+        } else {
+            setTokenInfo(data.filter((item) => item.srcChainID === to && item.DestToken.Symbol === token && item.bridge === protocol)[0]);
+        }        
+    }
+    , [from, to, token, protocol]);
 
     return (
         <div className="bridge">
