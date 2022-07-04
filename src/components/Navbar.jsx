@@ -46,10 +46,10 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="navbar">
+        <nav className="navbar nav-text">
             <NavLink to="/"><img src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" /></NavLink>
             <ul>
-                <li className="active">
+                <li>
                     <NavLink to="/bridge" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge </NavLink>
                 </li>
                 <li>
@@ -64,12 +64,12 @@ export default function Navbar() {
                 <li>
                 {isConnected ? (
                     <div className="account">
-                        <button>Account: {formatAddress(account)}</button>
+                        <button className="button-a">Account: {formatAddress(account)}</button>
                         <button onClick={disconnect}>Disconnect</button>
                     </div>
                 ) : (
                     <div className="account">
-                        <button onClick={connect}>Connect</button>
+                        <button className="button-a" onClick={connect}>Connect</button>
                     </div>
                 )
                 }
