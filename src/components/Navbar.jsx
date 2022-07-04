@@ -46,23 +46,27 @@ export default function Navbar() {
     }
 
     return (
-        <div className="navbar">
-            <img src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" />
-            <a href=""> Bridge </a>
-            <a href=""> Explorer </a>
-            <a href=""> Products </a>
-            <a href=""> Docs </a>
-            {isConnected ? (
-                <div className="account">
-                    <button>Account: {formatAddress(account)}</button>
-                    <button onClick={disconnect}>Disconnect</button>
-                </div>
-            ) : (
-                <div className="account">
-                    <button onClick={connect}>Connect</button>
-                </div>
-            )
-            }
-        </div>
+        <nav className="navbar">
+            <a href=""><img src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" /></a>
+            <ul>
+                <li className="active"><a href="/bridge"> Bridge </a></li>
+                <li><a href=""> Explorer </a></li>
+                <li><a href=""> Products </a></li>
+                <li><a href=""> Docs </a></li>
+                <li>
+                {isConnected ? (
+                    <div className="account">
+                        <button>Account: {formatAddress(account)}</button>
+                        <button onClick={disconnect}>Disconnect</button>
+                    </div>
+                ) : (
+                    <div className="account">
+                        <button onClick={connect}>Connect</button>
+                    </div>
+                )
+                }
+                </li>
+            </ul>   
+        </nav>
     );
 }
