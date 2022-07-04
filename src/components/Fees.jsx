@@ -60,7 +60,7 @@ export default function Fees() {
             setFees(0);
         }
     }
-    , [protocol, amount, token, from, to]);
+    , [protocol, amount, token, from, to, tokenInfo]);
 
     return (
         <div className="fees">
