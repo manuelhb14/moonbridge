@@ -32,6 +32,10 @@ body {
   --main-text-size: ;
   --sec-text-size: ;
   --small-text-size: ;
+  --arrow-regular: 20px;
+  --arrow-small: 16px;
+  --filter-blue: invert(85%) sepia(50%) saturate(3230%) hue-rotate(152deg) brightness(83%) contrast(109%);
+  --filter-pink: invert(18%) sepia(59%) saturate(7083%) hue-rotate(320deg) brightness(91%) contrast(93%);
 }
 /* Buttons */
 .button-a {
@@ -54,10 +58,13 @@ body {
 
 /* Navbar */
 .nav-text {color: var(--lightblue); font-size: var(--nav-text-size);}
-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 0 1rem;}
-nav a img { width: 10rem; height: auto; }
-nav ul li a { color: inherit; text-decoration: none;}
+nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 0.75rem 3.5rem;}
+nav .moonbeam-full { width: 10rem; height: auto; }
+nav ul li a { border: 1px solid red; color: inherit; text-decoration: none; display: flex; align-items: center; gap: .25rem;}
 nav ul { padding: 0; margin: 0; list-style: none; display: flex; gap: 2rem; align-items: center;}
 nav ul li a.active { color: red;}
 nav ul li a.active#product-nav { color: var(--lightblue); }
 
+nav li a .icon { height: var(--arrow-regular); filter: var(--filter-blue); -webkit-transform:rotate(270deg); -moz-transform: rotate(270deg); -ms-transform: rotate(270deg); -o-transform: rotate(270deg); transform: rotate(270deg); }
+
+nav li .account .icon { height: var(--arrow-regular); filter: var(--filter-blue); }
