@@ -46,14 +46,14 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="navbar nav-text">
-            <NavLink to="/"><img src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" /></NavLink>
+        <nav className="nav-text">
+            <NavLink to="/"><img className="moonbeam-full" src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" /></NavLink>
             <ul>
                 <li>
-                    <NavLink to="/bridge" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge </NavLink>
+                    <NavLink to="/bridge" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge < img className="icon" src="assets/icons/arrow.svg" alt="arrow " />  </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/explorer" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Explorer </NavLink>
+                    <NavLink to="/explorer" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Explorer < img className="icon" src="assets/icons/arrow.svg" alt="arrow " /> </NavLink>
                 </li>
                 <li>
                     <NavLink to="/" id="product-nav" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Product </NavLink>
@@ -64,7 +64,7 @@ export default function Navbar() {
                 <li>
                 {isConnected ? (
                     <div className="account">
-                        <button className="button-a">Account: {formatAddress(account)}</button>
+                        <button className="button-a"> {formatAddress(account)} < img className="icon" src="assets/icons/arrow.svg" alt="arrow " /> </button>
                         <button onClick={disconnect}>Disconnect</button>
                     </div>
                 ) : (
