@@ -16,17 +16,19 @@ export default function Fees() {
                 console.log(2);
                 let response = "";
                 const SwapFee = tokenInfo.SrcToken.ContractInfo.SwapFee;
-                const url = `${SwapFee.baseUrl}/?fromChain=${SwapFee.fromChain}&toChain=${SwapFee.toChain}&fromToken=${SwapFee.fromToken.toUpperCase()}&toToken=${SwapFee.toToken.toUpperCase()}&amountFrom=${BigInt(amount * 10 ** tokenInfo.SrcToken.Decimals).toString()}`;
-                console.log(url);
-                fetch(url).then(res => res.json()).then(res => {
-                    response = res;
-                    setExpectedAmount(response.amountToReceive / 10 ** tokenInfo.SrcToken.Decimals);
-                    setFees(response.bridgeFee / 10 ** tokenInfo.SrcToken.Decimals);
+                if (SwapFee !== undefined) {
+                    const url = `${SwapFee.baseUrl}/?fromChain=${SwapFee.fromChain}&toChain=${SwapFee.toChain}&fromToken=${SwapFee.fromToken.toUpperCase()}&toToken=${SwapFee.toToken.toUpperCase()}&amountFrom=${BigInt(amount * 10 ** tokenInfo.SrcToken.Decimals).toString()}`;
+                    console.log(url);
+                    fetch(url).then(res => res.json()).then(res => {
+                        response = res;
+                        setExpectedAmount(response.amountToReceive / 10 ** tokenInfo.SrcToken.Decimals);
+                        setFees(response.bridgeFee / 10 ** tokenInfo.SrcToken.Decimals);
+                    }
+                    ).catch(err => {
+                        console.log(err);
+                    }
+                    );
                 }
-                ).catch(err => {
-                    console.log(err);
-                }
-                );
             } else {
                 console.log(3);
                 console.log('here');
@@ -44,7 +46,7 @@ export default function Fees() {
                 }
                 );
             }
-        } else if (protocol === 'Multichain' && !isNaN(amount) && tokenInfo ) {
+        } else if (protocol === 'Multichain' && !isNaN(amount) && tokenInfo && amount > 0) {
             if (from !== process.env.REACT_APP_MOONBEAM_CHAIN_ID) {
                 console.log(4);
                 setFees(amount * (1 * tokenInfo.SrcToken.ContractInfo.SwapFeeRate));
