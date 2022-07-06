@@ -45,36 +45,60 @@ export default function Navbar() {
         }
     }
 
+    const nav = () => {
+      var nav = document.getElementsByTagName("nav")[0];
+      var toggler = document.getElementById("nav-toggler");
+      if (toggler.classList.contains("open")) {
+          nav.classList.remove("open");
+          toggler.classList.remove("open");
+        } else {
+          nav.classList.add("open");
+          toggler.classList.add("open");
+        }
+    }
+
     return (
-        <nav className="nav-text">
-            <NavLink to="/"><img className="moonbeam-full" src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" /></NavLink>
-            <ul>
-                <li>
-                    <NavLink to="/bridge" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge < img className="icon" src="assets/icons/arrow.svg" alt="arrow " />  </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/explorer" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Explorer < img className="icon" src="assets/icons/arrow.svg" alt="arrow " /> </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/" id="product-nav" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Product </NavLink>
-                </li>
-                <li>
-                    <a href="/"> Docs </a>
-                </li>
-                <li>
-                {isConnected ? (
-                    <div className="account">
-                        <button className="button-a"> {formatAddress(account)} < img className="icon" src="assets/icons/arrow.svg" alt="arrow " /> </button>
-                        <button onClick={disconnect}>Disconnect</button>
-                    </div>
-                ) : (
-                    <div className="account">
-                        <button className="button-a" onClick={connect}>Connect</button>
-                    </div>
-                )
-                }
-                </li>
-            </ul>   
+        <nav className="navbar">
+            <NavLink to="/" className="logo">
+                <img className="moonbeam-full" src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" />
+            </NavLink>
+            <div className="nav-items">
+                <ul>
+                    <li>
+                        <NavLink to="/bridge" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge < img className="icon" src="assets/icons/arrow.svg" alt="arrow " />  </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/explorer" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Explorer < img className="icon" src="assets/icons/arrow.svg" alt="arrow " /> </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Product </NavLink>
+                    </li>
+                    <li>
+                        <a href="/"> Docs </a>
+                    </li>
+                </ul>
+                <div className="account">
+                    {isConnected ? (
+                        <div className="account dropdown">
+                            <button className="button-a"> {formatAddress(account)} < img className="icon" src="assets/icons/arrow.svg" alt="arrow " /></button>
+                            <div className="dropdown-menu">
+                                <a href="javascript:;" onClick={disconnect}>Disconnect</a>
+                            </div>
+                            {/* <button className="disconnect-btn" onClick={disconnect}>Disconnect</button> */}
+                        </div>
+                    ) : (
+                        <div className="account">
+                            <button className="button-a" onClick={connect}>Connect</button>
+                        </div>
+                    )
+                    }
+                </div>
+                <a href="javascript:;" id="nav-toggler" onClick={nav}>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </a>
+            </div>
         </nav>
     );
 }
