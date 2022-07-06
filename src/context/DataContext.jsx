@@ -16,24 +16,25 @@ export const DataProvider = ({ children }) => {
     const [account, setAccount] = useState('');
     const [tokenInfo, setTokenInfo] = useState(null);
     const [txInfo, setTxInfo] = useState(null);
+    const [txDetails, setTxDetails] = useState(null);
     const [networks, setNetworks] = useState({
         // TODO: get from endpoint instead of hardcoded
-        "288": "Boba",
         "1": "Ethereum",
+        "10": "Optimism",
+        "25": "Cronos",
+        "56": "Binance Smart Chain",
+        "137": "Polygon",
+        "288": "Boba",
+        "250": "Fantom",
         "1088": "Metis",
         "1284": "Moonbeam",
         "1285": "Moonriver",
-        "137": "Polygon",
-        "10": "Optimism",
-        "43114": "Avalanche",
         "42161": "Arbitrum",
-        "56": "Binance Smart Chain",
-        "25": "Cronos",
-        "250": "Fantom"
+        "43114": "Avalanche"
     });
 
     return (
-        <DataContext.Provider value={{ from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, networks, setNetworks, isConnected, setIsConnected, account, setAccount, tokenInfo, setTokenInfo, txInfo, setTxInfo }}>
+        <DataContext.Provider value={{ from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, networks, setNetworks, isConnected, setIsConnected, account, setAccount, tokenInfo, setTokenInfo, txInfo, setTxInfo, txDetails, setTxDetails }}>
             {children}
         </DataContext.Provider>
     );

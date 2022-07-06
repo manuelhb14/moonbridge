@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import TimeAgo from 'javascript-time-ago'
 import en from 'javascript-time-ago/locale/en'
+import { NavLink } from "react-router-dom";
 
 import { DataContext } from "../context/DataContext";
 
@@ -42,7 +43,7 @@ export default function ExplorerContainer() {
                     </tr>
                     {txInfo ? txInfo.map((item) => {
                         return <tr key={item.txid}>
-                            <td>{formatHash(item.txid)}</td>
+                            <td><NavLink to={`/tx/${item.txid}`}>{formatHash(item.txid)}</NavLink></td>
                             <td>{item.token}</td>
                             <td>Sent: {item.formatvalue} <span> Received: {item.formatvalue}</span></td>
                             <td>{networks[item.srcChainId]}</td>
