@@ -39,32 +39,82 @@ body {
 }
 /* Buttons */
 .button-a {
-  border: 1px solid var(--lightblue); color: var(--lightblue); background-color: transparent; border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem; -webkit-box-shadow: 0px 0px 15px 3px rgba(33,191,220,0.45); box-shadow: 0px 0px 10px 0px rgba(33,191,220,0.4);
+  border: 1px solid var(--lightblue); color: var(--lightblue); background-color: transparent; border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem; -webkit-box-shadow: 0px 0px 5px 3px rgba(33,191,220,0.45); box-shadow: 0px 0px 5px 0px rgba(33,191,220,0.4); outline: none!important;
 }
+.button-a .icon { height: var(--arrow-regular); filter: var(--filter-blue); transition: 0.5s; }
+
 .button-b {
   border: 1px solid rgba(241, 241, 241, 0.15); color: var(--white); background-color: var(--pink); border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem; -webkit-box-shadow: 0px 0px 15px 3px rgba(225,20,123,0.65); box-shadow: 0px 0px 10px 0px rgba(225,20,123,0.65);
 }
+
 .button-c {
   border: 1px solid var(--lightblue); color: var(--lightblue); background-color: var(--greyblue); border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem;
 }
+
 .button-d {
   border: none; color: var(--white); background-color: var(--greyblue); border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem;
 }
+
 .button-e {
   border: 1px solid var(--pink); color: var(--pink); background-color: var(--greyblue); border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem;
 }
 
 
 
-/* Navbar */
-.nav-text {color: var(--lightblue); font-size: var(--nav-text-size);}
-nav { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 0.75rem 3.5rem;}
-nav .moonbeam-full { width: 10rem; height: auto; }
-nav ul li a { border: 1px solid red; color: inherit; text-decoration: none; display: flex; align-items: center; gap: .25rem;}
-nav ul { padding: 0; margin: 0; list-style: none; display: flex; gap: 2rem; align-items: center;}
-nav ul li a.active { color: red;}
-nav ul li a.active#product-nav { color: var(--lightblue); }
+/** Navbar **/
+nav.navbar { color: var(--lightblue); font-size: var(--nav-text-size); display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 0.75rem 3.5rem;}
+nav.navbar .moonbeam-full { width: 10rem; height: auto; }
+nav .nav-items { display: flex; justify-content: flex-end; align-items: center; align-content: center; flex-wrap: wrap; gap: 2rem; flex-direction: row; }
+nav .nav-items ul { padding: 0; margin: 0; list-style: none; display: flex; gap: 2rem; align-items: center; flex-direction: row; }
+nav .nav-items ul li a { color: inherit; text-decoration: none; display: flex; align-items: center; gap: .25rem; transition: 0.5s; }
+nav .nav-items ul li a .icon { height: var(--arrow-regular); filter: var(--filter-blue); -webkit-transform:rotate(270deg); -moz-transform: rotate(270deg); -ms-transform: rotate(270deg); -o-transform: rotate(270deg); transform: rotate(270deg); transition: 0.5s; }
+nav .nav-items ul li a:hover { color: var(--white); text-decoration: none; }
+nav .nav-items ul li a:hover .icon { filter: invert(500%); }
+nav .nav-items ul li a.active {  }
+nav .nav-items ul li a.inactive {  }
 
-nav li a .icon { height: var(--arrow-regular); filter: var(--filter-blue); -webkit-transform:rotate(270deg); -moz-transform: rotate(270deg); -ms-transform: rotate(270deg); -o-transform: rotate(270deg); transform: rotate(270deg); }
+/*Nav toggler*/
+#nav-toggler { padding-top: .25rem; padding-bottom: .25rem; transition: 0.4s; border-radius: 5px; padding-left: 6px; padding-right: 6px; display: none; }
+#nav-toggler .bar1, .bar2, .bar3 { width: 30px; height: 3px; border-radius: 10rem; background-color: var(--lightblue); margin: 6px 0; transition: 0.5s; }
+#nav-toggler.open .bar1 { -webkit-transform: rotate(-45deg) translate(-9px, 6px); transform: rotate(-45deg) translate(-9px, 6px); }
+#nav-toggler.open .bar2 { opacity: 0; }
+#nav-toggler.open .bar3 { -webkit-transform: rotate(45deg) translate(-6px, -4px); transform: rotate(45deg) translate(-6px, -4px); }
+#nav-toggler:hover :is(.bar1, .bar2, .bar3) { background-color: var(--white); }
 
-nav li .account .icon { height: var(--arrow-regular); filter: var(--filter-blue); }
+/*Navbar account*/
+nav .account .account.dropdown {  }
+nav .account .account.dropdown .dropdown-menu { display: none; }
+nav .account .account.dropdown:hover {  }
+nav .account .account.dropdown:hover .button-a {  }
+nav .account .account.dropdown:hover .button-a .icon { transform: rotate(180deg) translateY(1px); }
+nav .account .account.dropdown:hover .dropdown-menu { display: block; margin: 0; background: transparent; min-width: unset; font-size: inherit; left: 15%; right: 0; }
+nav .account .account.dropdown .dropdown-menu a { color: var(--pink); justify-content: center; text-align: center; display: block; border: 1px solid var(--pink); border-radius: 5px; padding: 0.4rem 0; text-decoration: none; }
+
+
+
+/**********Large (lg)**********/
+@media (max-width: 1199.98px) {}
+
+/**********Medium (md)**********/
+@media (max-width: 991.98px) {
+  .navbar.open { background: var(--greyblue); }
+  nav .logo { order: 1; }
+  nav .nav-items { order: 2; }
+  nav .nav-items ul { position: absolute; top: 0; left: 0; right: 0; padding: 1rem 3.5rem 1.75rem 3.5rem; margin: 4rem 0 0 0; list-style: none; display: flex; gap: 1rem; align-items: flex-start; flex-direction: column; background-color: var(--greyblue); transition: 0s; transform: translateY(-100vh); z-index: 0; }
+  nav.open .nav-items ul { transform: translateY(0); }
+  
+  #nav-toggler { display: inline-block; position: relative; }
+
+}
+
+/**********Small (sm)**********/
+@media (max-width: 767.98px) {}
+
+/**********Extra small (xs)**********/
+@media (max-width: 575.98px) {
+  .button-a { padding: 0.25rem 0.7rem; }
+
+  nav.navbar { padding: 0.75rem 1.5rem; font-size: 1rem; gap: 0; }
+  nav.navbar .moonbeam-full { width: 7.5rem; height: auto; }
+  nav .nav-items { gap: 1rem; }
+}
