@@ -15,6 +15,7 @@ export const DataProvider = ({ children }) => {
     const [isConnected, setIsConnected] = useState(false);
     const [account, setAccount] = useState('');
     const [tokenInfo, setTokenInfo] = useState(null);
+    const [txInfo, setTxInfo] = useState(null);
     const [networks, setNetworks] = useState({
         // TODO: get from endpoint instead of hardcoded
         "288": "Boba",
@@ -32,7 +33,7 @@ export const DataProvider = ({ children }) => {
     });
 
     return (
-        <DataContext.Provider value={{ from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, networks, setNetworks, isConnected, setIsConnected, account, setAccount, tokenInfo, setTokenInfo }}>
+        <DataContext.Provider value={{ from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, networks, setNetworks, isConnected, setIsConnected, account, setAccount, tokenInfo, setTokenInfo, txInfo, setTxInfo }}>
             {children}
         </DataContext.Provider>
     );
