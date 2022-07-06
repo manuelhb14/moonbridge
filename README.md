@@ -68,3 +68,6 @@ Useful timestamps:
 - Add more bridges
 - Token swap support
 - Add useful popup alerts
+- Add other wallets
+- Add unit testing
+- Show fees for every bridge

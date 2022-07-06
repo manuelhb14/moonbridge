@@ -35,7 +35,7 @@ export default function Bridge() {
 
     return (
         <div className="bridge">
-            <Title />
+            <Title title="Moonbeam Bridge Aggregator"/>
             <BridgeContainer />
         </div>
     )
