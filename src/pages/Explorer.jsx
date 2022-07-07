@@ -20,14 +20,15 @@ export default function Explorer() {
     return (
         <main>
             <div className="top-explorer-section">
-            <Title title="Moonbeam Explorer"/>
+                <Title title="Moonbeam Explorer"/>
                 <center><div className="container-searchbar"> 
                 <SearchBar/>
                 </div></center>
             </div>
 
             <div className="bottom-explorer-section">
-            <ExplorerContainer /></div>
+                <div className="explorer-table-div"><ExplorerContainer /></div>
+                </div>
         
         </main>
         
