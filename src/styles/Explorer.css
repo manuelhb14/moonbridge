@@ -4,11 +4,13 @@
     background-position: bottom;
     background-repeat: no-repeat;
     text-align: center;
-    border: 1px solid red;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
-
+.title{
+    font-size: var(--ts-title);
+    color: var(--lightblue);
+}
 .container-searchbar{
     align-content: center;
     width: 45%;
@@ -30,7 +32,7 @@
 }
 .form-control:focus{
     background-color: var(--darkblue); 
-    color: var(--lightblue) ;
+    color: var(--lightblue);
     font-size: var(--ts-sec);
     box-shadow: 0px 0px 0px #21BFDC;
 }
@@ -50,6 +52,87 @@
 
 .bottom-explorer-section{
     background-color:  var(--darkblue);
-    border: 1px solid green;
+    border-top: 1px solid var(--lightblue);
     text-align:center;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+.explorer-table-div{
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.explorer{
+    border: 1px solid var(--lightblue);
+}
+.explorer thead{
+    background-color: var(--darkblue);
+    color: var(--lightblue);
+    text-align: center;
+    font-size: var(--ts-sec);
+}
+
+.explorer tbody{
+    background-color: var(--greyblue);
+    color: var(--white);
+    text-align: center;
+    font-size: var(--ts-sec);
+}
+.explorer td{
+    padding: 1rem;
+}
+.spanexplorer{
+    color: var(--lightblue);
+}
+
+/**********Large (lg)**********/
+@media (max-width: 1199.98px) {}
+
+/**********Medium (md)**********/
+@media (max-width: 991.98px) {
+    .explorer-table-div{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+}
+
+/**********Small (sm)**********/
+@media (max-width: 767.98px) {
+    .explorer{
+        border-left: 0px ;
+        border-right: 0px ;
+    }
+    .explorer-table-div{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+  :root {
+    --ts-title: 2rem;
+  }
+}
+
+
+
+
+
+/**********Extra small (xs)**********/
+@media (max-width: 575.98px) {
+    .explorer td{
+        padding: 0.75rem;
+    }
+    .explorer{
+        border-left: 0px ;
+        border-right: 0px ;
+    }
+    .explorer-table-div{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+  :root {
+  --ts-title: 1.75rem;
+  }
+
+
+
 }
