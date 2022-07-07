@@ -29,7 +29,7 @@ export default function ExplorerContainer() {
     }
 
     return (
-            <div className="explorer">
+            <div className="explorer-table">
                 <table>
                     <tr>
                         <th>Transaction Hash</th>
