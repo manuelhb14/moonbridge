@@ -65,8 +65,6 @@ export default function Fees() {
     , [protocol, amount, token, from, to, tokenInfo]);
 
     return (
-        <div className="fees">
-            <p>Protocol fees: {fees}</p>
-        </div>
+        <p>Protocol fees: {fees}</p>
     )
 }
