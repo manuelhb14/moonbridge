@@ -12,7 +12,7 @@ export default function SwapNetwork() {
     }
 
     return (
-        <button onClick={() => swapNetwork(from, to)}>Swap</button>
+        <button id="swap-network" onClick={() => swapNetwork(from, to)}>Swap</button>
     )
 
 }
