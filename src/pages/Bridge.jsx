@@ -34,9 +34,9 @@ export default function Bridge() {
     , [from, to, token, protocol]);
 
     return (
-        <div className="bridge">
-            <Title title="Moonbeam Bridge Aggregator"/>
+        <section className="bridge container">
+            <Title title="Moonbeam Token Bridge"/>
             <BridgeContainer />
-        </div>
+        </section>
     )
 }

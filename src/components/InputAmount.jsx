@@ -6,6 +6,6 @@ export default function InputAmount() {
     const { amount, setAmount } = useContext(DataContext);
 
     return (
-        <input type="text" id="amount" placeholder="0" onChange={(e) => setAmount(e.target.value)} value={amount} />
+        <input type="number" id="amount" placeholder="0" onChange={(e) => setAmount(e.target.value)} value={amount} />
     )
 }

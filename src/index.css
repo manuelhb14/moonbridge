@@ -9,12 +9,11 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 /* Global CSS */
-header {
-  background-image: url(../public/assets/imgs/background.png); height: 100vh; background-position: center; background-size: cover; background-repeat: no-repeat;
-}
+main { background-image: url(../public/assets/imgs/background.png); height: 100vh; background-position: center; background-size: cover; background-repeat: no-repeat; padding-bottom: 2rem; overflow: auto; }
 :root {
   /* Colors */
   --lightblue: #21BFDC;

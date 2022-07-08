@@ -15,24 +15,37 @@ export default function BridgeContainer() {
     }
     
     return (
-        <div className="bridge-container">
-            <AvailableNetworks value="from" />
-
-            <SwapNetwork />
-
-            <AvailableNetworks value="to" />
-
-            <InputAmount />
-
-            <AvailableTokens />
-
-            <ExpectedAmount />
-
-            <AvailableProtocols />
-
-            <button id="convert" onClick={transfer}>Convert</button>
-
-            <Fees />
+        <div className="bridge-container container">
+            <div className="bridge-item">
+                <span className="text">From</span><AvailableNetworks value="from" />
+            </div>
+            <div className="bridge-item text-right">
+                <small className="text"><u>Max:</u></small>
+                <br />
+                <div className="input-textEselect">
+                    <InputAmount /><AvailableTokens />
+                </div>
+            </div>
+            <div className="bridge-item">
+                <SwapNetwork />
+            </div>
+            <div className="bridge-item">
+                <span className="text">To</span><AvailableNetworks value="to" />
+            </div>
+            <div className="bridge-item">
+                <small className="text">(Estimated)</small>
+                <br />
+                <ExpectedAmount />
+            </div>
+            <div className="bridge-item">
+                <span className="text">via Protocol</span><AvailableProtocols />
+            </div>
+            <div className="bridge-item">
+                <button id="transfer-btn" onClick={transfer}>Transfer</button>
+            </div>
+            <div className="bridge-item fees">
+                <Fees />
+            </div>
         </div>
     )
 }
