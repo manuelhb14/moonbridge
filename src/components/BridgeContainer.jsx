@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ethers } from "ethers";
 
 import { DataContext } from "../context/DataContext";
@@ -15,7 +15,7 @@ import multichainabi from "../constants/abis/multichainabi";
 
 export default function BridgeContainer() {
 
-    const { isConnected, setIsConnected, setAccount, from, to, token, amount, protocol, tokenInfo } = useContext(DataContext);
+    const { isConnected, setIsConnected, setAccount, from, to, token, amount, protocol, tokenInfo, setFrom, setTo } = useContext(DataContext);
 
     const transfer = () => {
         if (from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '') {
@@ -100,10 +100,10 @@ export default function BridgeContainer() {
                 const tx = {
                     to: response.to,
                     value: response.value,
-                    data: response.data,
+                    data: response.unsigned_data,
                     gasLimit: response.gasLimit
                 }
-                // eslint-disable-next-line no-undef
+                console.log(tx);
                 await signer.sendTransaction(tx).then((tx) => {
                     console.log(tx);
                 }
@@ -114,10 +114,9 @@ export default function BridgeContainer() {
             } else {
                 const tx = {
                     to: response.to,
-                    data: response.data,
+                    data: response.unsigned_data,
                     gasLimit: response.gasLimit
                 }
-                // eslint-disable-next-line no-undef
                 await signer.sendTransaction(tx).then((tx) => {
                     console.log(tx);
                 }
@@ -163,6 +162,26 @@ export default function BridgeContainer() {
         }
     }
 
+    const onChainChange = (chainId) => {
+        // returns hex value of the chain
+        const chain = parseInt(chainId, 16).toString();
+        console.log(chain);
+        if (chain !== process.env.REACT_APP_MOONBEAM_CHAIN_ID) {
+            setFrom(chain);
+            setTo(process.env.REACT_APP_MOONBEAM_CHAIN_ID);
+        } else {
+            setFrom(chain);
+            setTo("1");
+        }
+    }
+
+    useEffect(() => {
+        if (isConnected) {
+            window.ethereum.autoRefreshOnNetworkChange = false;
+            window.ethereum.on('chainChanged', onChainChange);
+        }
+    }, []);
+    
 
     const connect = async () => {
         if (window.ethereum) {
@@ -172,6 +191,8 @@ export default function BridgeContainer() {
                 setIsConnected(true);
                 let account = await window.ethereum.request({ method: "eth_accounts" });
                 setAccount(account[0]);
+                const currentChain = await window.ethereum.request({ method: "eth_chainId" });
+                onChainChange(currentChain);
             } catch (error) {
                 console.log('Error connecting to Ethereum');
             }
