@@ -12,8 +12,8 @@ body {
   overflow: hidden;
 }
 
-/* Global CSS */
 main { background-image: url(../public/assets/imgs/background.png); height: 100vh; background-position: center; background-size: cover; background-repeat: no-repeat; padding-bottom: 2rem; overflow: auto; }
+
 :root {
   /* Colors */
   --lightblue: #21BFDC;
@@ -22,15 +22,14 @@ main { background-image: url(../public/assets/imgs/background.png); height: 100v
   --darkblue: #050B25;
   --greyblue: #0D1126;
   /*  Font Sizing */
-  --nav-text-size: 1.125rem;
-  --big-title-text-size: 3rem;
-  --title-text-size: 1.8rem;
-  --subtitle-text-size: 1.4rem;
-  --tertiary-text-size: 1.2rem;
-  --button-text-size: 1.125rem;
-  --main-text-size: ;
-  --sec-text-size: ;
-  --small-text-size: ;
+  --ts-nav: 1.125rem;
+  --ts-big-title: 3rem;
+  --ts-title: 2.65rem;
+  --ts-subtitle: 1.5rem;
+  --ts-tertiary: 1.2rem;
+  --ts-main: 0.8rem;
+  --ts-sec: 0.875rem;
+  --ts-small: 0.845rem;
   --arrow-regular: 20px;
   --arrow-small: 16px;
   --bold: 700;
@@ -38,8 +37,30 @@ main { background-image: url(../public/assets/imgs/background.png); height: 100v
   --filter-blue: invert(85%) sepia(50%) saturate(3230%) hue-rotate(152deg) brightness(83%) contrast(109%);
   --filter-pink: invert(18%) sepia(59%) saturate(7083%) hue-rotate(320deg) brightness(91%) contrast(93%);
 }
+
 /* Text colors */
-.white-text { color: var(--white); }
+.t-white { color: var(--white); }
+.t-lightblue { color: var(--lightblue); }
+.t-pink { color: var(--pink);}
+.t-darkblue { color: var(--darkblue); }
+.t-greyblue { color: var(--greyblue); }
+
+/* Text weight */
+.tw-bold { font-weight: var(--bold); }
+.tw-medium { font-weight: var(--medium); }
+
+.t-center { text-align: center; }
+
+/* Text size */
+.ts-nav { font-size: var(--ts-nav); }
+.ts-big-title { font-size: var(--ts-big-title); color: var(--lightblue); font-weight: var(--bold); text-align: center; }
+.ts-title { font-size: var(--ts-title); color: var(--lightblue); font-weight: var(--bold); }
+.ts-subtitle { font-size: var(--ts-subtitle); color: var(--lightblue); font-weight: var(--bold); }
+.ts-tertiary { font-size: var(--ts-tertiary); }
+.ts-main { font-size: var(--ts-main); }
+.ts-sec { font-size: var(--ts-sec); }
+.ts-small { font-size: var(--ts-small); }
+
 
 /* Buttons */
 .button-a {
@@ -66,7 +87,9 @@ main { background-image: url(../public/assets/imgs/background.png); height: 100v
 
 
 /** Navbar **/
-nav.navbar { color: var(--lightblue); font-size: var(--nav-text-size); display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 0.75rem 3.5rem; z-index: 1; }
+
+nav.navbar { color: var(--lightblue); font-size: var(--ts-nav); display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 0.75rem 3.5rem;}
+
 nav.navbar .moonbeam-full { width: 10rem; height: auto; }
 nav .nav-items { display: flex; justify-content: flex-end; align-items: center; align-content: center; flex-wrap: wrap; gap: 2rem; flex-direction: row; }
 nav .nav-items ul { padding: 0; margin: 0; list-style: none; display: flex; gap: 2rem; align-items: center; flex-direction: row; }
@@ -113,7 +136,22 @@ nav .account .account.dropdown .dropdown-menu a { color: var(--pink); justify-co
 }
 
 /**********Small (sm)**********/
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+  :root {
+    --ts-nav: 1rem;
+    --ts-big-title: 2.5rem;
+    --ts-title: 2rem;
+    --ts-subtitle: 1.4rem;
+    --ts-tertiary: 1.1rem;
+    --ts-main: 0.8rem;
+    --ts-sec: 0.875rem;
+    --ts-small: 0.845rem;
+  }
+}
+
+
+
+
 
 /**********Extra small (xs)**********/
 @media (max-width: 575.98px) {
@@ -122,4 +160,18 @@ nav .account .account.dropdown .dropdown-menu a { color: var(--pink); justify-co
   nav.navbar { padding: 0.75rem 1.5rem; font-size: 1rem; gap: 0; }
   nav.navbar .moonbeam-full { width: 7.5rem; height: auto; }
   nav .nav-items { gap: 1rem; }
+
+  :root {
+    --ts-nav: 1rem;
+  --ts-big-title: 2rem;
+  --ts-title: 1.75rem;
+  --ts-subtitle: 1.3rem;
+  --ts-tertiary: 1.1rem;
+  --ts-main: 0.8rem;
+  --ts-sec: 0.875rem;
+  --ts-small: 0.845rem;  
+  }
+
+
+
 }

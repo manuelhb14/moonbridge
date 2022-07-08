@@ -54,6 +54,7 @@ export default function TransactionDetails() {
 
     return (
         <div key="tx-details" >
+            <h3>Transaction Details</h3>
             {txDetails ?
                 (
                     <div className="tx-info">
