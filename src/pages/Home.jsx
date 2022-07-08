@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
 
@@ -10,8 +11,8 @@ export default function Home() {
                     <p className="ts-tertiary t-center t-white">Bridge multichain assets in the Moonbeam aggregator. Enter the explorer of transactions within the ecosystem.</p>
                     <div className="t-center parent-button-container">
                         <div className="home-button-container">
-                            <a href="" className="button-b ts-tertiary t-center t-white">Launch bridge</a>
-                            <a href="" className="button-a ts-tertiary t-center t-lightblue">Explorer</a>
+                            <NavLink to="/bridge" className="button-b ts-tertiary t-center t-white">Launch bridge</NavLink>
+                            <NavLink to="/explorer" className="button-a ts-tertiary t-center t-lightblue">Explorer</NavLink>
                         </div>
                     </div>
                 </div>

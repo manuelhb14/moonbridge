@@ -210,14 +210,14 @@ export default function BridgeContainer() {
             {isConnected ? (
                 <div className="button">
                     {from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '' ? (
-                        <button id="convert" onClick={transfer}>Convert</button>
+                        <button id="transfer-btn" onClick={transfer}>Convert</button>
                     ) : (
-                        <button id="convert" disabled>Convert</button>
+                        <button id="transfer-btn-disabled" disabled>Convert</button>
                     )}
                 </div>
             ) : (
                 <div className="button">
-                    <button id="connect" onClick={connect}>Connect</button>
+                    <button id="transfer-btn" onClick={connect}>Connect</button>
                 </div>
             )}
             </div>

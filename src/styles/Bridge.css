@@ -24,6 +24,7 @@ input::-webkit-inner-spin-button {
 #token-btn { border: 0; border-radius: 0 5px 5px 0; padding: .6rem .75rem; width: 100%; font-size: 1rem; width: 100%; flex: 0 0 50%; text-align: right; }
 
 #transfer-btn { width: 100%; border: 0; background-color: var(--pink); color: white; font-size: 1.2rem; border-radius: 5px; padding: .8rem 0; box-shadow: 0px 0px 5px 0px rgba(225,20,123,0.4); }
+#transfer-btn-disabled { width: 100%; border: 0; background-color: var(--pink); color: white; font-size: 1.2rem; border-radius: 5px; padding: .8rem 0; box-shadow: 0px 0px 5px 0px rgba(225,20,123,0.4); opacity: 0.6;}
 
 
 /**********Large (lg)**********/
