@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 
 import { DataContext } from "../context/DataContext";
@@ -15,7 +15,97 @@ import multichainabi from "../constants/abis/multichainabi";
 
 export default function BridgeContainer() {
 
-    const { isConnected, setIsConnected, setAccount, from, to, token, amount, protocol, tokenInfo, setFrom, setTo } = useContext(DataContext);
+    const { isConnected, setIsConnected, setAccount, from, to, token, amount, protocol, tokenInfo, setFrom, setTo, setToken, setAmount, setFees, setProtocol, setTokenInfo, isApproved, setIsApproved } = useContext(DataContext);
+
+    const [buttonText, setButtonText] = useState("Connect");
+
+    useEffect(() => {
+        if (isConnected) {
+            window.ethereum.autoRefreshOnNetworkChange = false;
+            window.ethereum.on('chainChanged', onChainChange);
+        }
+    }, []);
+
+    useEffect(() => {
+        checkStatus();
+    }, [isConnected, from, to, token, amount, protocol, tokenInfo, isApproved]);
+
+    useEffect(() => {
+        if (tokenInfo) {
+            checkAllowance();
+        }
+    }
+    , [tokenInfo]);
+
+    const checkAllowance = async () => {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        if (protocol === 'Synapse') {
+            let url = "";
+            if (from === tokenInfo.srcChainID) {
+                const contractInfo = tokenInfo.SrcToken.ContractInfo;
+                if (contractInfo.BridgeApproval) {
+                    console.log(contractInfo);
+                    url = `${contractInfo.BridgeApproval.baseUrl}?fromChain=${contractInfo.BridgeApproval.params.fromChain}&fromToken=${contractInfo.BridgeApproval.params.fromToken.toUpperCase()}`;
+                    console.log(url);
+                } else {
+                    setIsApproved(true);
+                    return;
+                }
+            } else {
+                const contractInfo = tokenInfo.DestToken.ContractInfo;
+                console.log(contractInfo);
+                url = `${contractInfo.BridgeApproval.baseUrl}?fromChain=${contractInfo.BridgeApproval.params.fromChain}&fromToken=${contractInfo.BridgeApproval.params.fromToken.toUpperCase()}`;
+                console.log(url);
+            }
+            const response = await fetch(url).then((response) => {
+                return response.json();
+            }
+            ).catch(error => {
+                console.log(error);
+            }
+            );
+            console.log(response);
+            let contractAddress = "";
+            console.log(tokenInfo);
+            console.log(tokenInfo.srcChainID);
+            if (await tokenInfo.srcChainID === from) {
+                contractAddress = tokenInfo.SrcToken.ContractAddress;
+                console.log('SrcToken contractAddress: ' + contractAddress);
+            } else {
+                contractAddress = tokenInfo.DestToken.ContractAddress;
+                console.log('DestToken contractAddress: ' + contractAddress);
+            }
+            const bridgeContract = "0x" + response.unsigned_data.substring(34, 74);
+            console.log('bridgeContract: ' + bridgeContract);
+            const contract = new ethers.Contract(contractAddress, erc20abi, signer);
+            const allowance = await contract.allowance(signer.getAddress(), bridgeContract);
+            console.log(allowance);
+            if (allowance > 0) {
+                setIsApproved(true);
+            } else {
+                setIsApproved(false);
+            }
+        } else if (protocol === 'Multichain') {
+            setIsApproved(true);
+        }
+    }
+     
+    const checkStatus = async () => {
+        if (isConnected) {
+            if (from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '') {
+                if (isApproved && amount > 0) {
+                    setButtonText("Swap");
+                } else if (!isApproved) {
+                    setButtonText("Approve " + token);
+                }
+            } else {
+                setButtonText("Swap");
+            }
+        } else {
+            setButtonText("Connect");
+        }
+    }
 
     const transfer = () => {
         if (from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '') {
@@ -169,19 +259,18 @@ export default function BridgeContainer() {
         if (chain !== process.env.REACT_APP_MOONBEAM_CHAIN_ID) {
             setFrom(chain);
             setTo(process.env.REACT_APP_MOONBEAM_CHAIN_ID);
+
         } else {
             setFrom(chain);
             setTo("1");
         }
+        setToken('');
+        setAmount('');
+        setFees(0);
+        setProtocol('');
+        setTokenInfo(null);
+        setIsApproved(false);
     }
-
-    useEffect(() => {
-        if (isConnected) {
-            window.ethereum.autoRefreshOnNetworkChange = false;
-            window.ethereum.on('chainChanged', onChainChange);
-        }
-    }, []);
-    
 
     const connect = async () => {
         if (window.ethereum) {
@@ -199,6 +288,44 @@ export default function BridgeContainer() {
         } else {
             console.log('No Metamask detected');
         }
+    }
+
+    const approve = async () => {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        let url = "";
+        if (from === tokenInfo.srcChainID) {
+            const contractInfo = tokenInfo.SrcToken.ContractInfo;
+            console.log(contractInfo);
+            url = `${contractInfo.BridgeApproval.baseUrl}?fromChain=${contractInfo.BridgeApproval.params.fromChain}&fromToken=${contractInfo.BridgeApproval.params.fromToken.toUpperCase()}`;
+            console.log(url);
+        } else {
+            const contractInfo = tokenInfo.DestToken.ContractInfo;
+            console.log(contractInfo);
+            url = `${contractInfo.BridgeApproval.baseUrl}?fromChain=${contractInfo.BridgeApproval.params.fromChain}&fromToken=${contractInfo.BridgeApproval.params.fromToken.toUpperCase()}`;
+            console.log(url);
+        }
+        const response = await fetch(url).then((response) => {
+            return response.json();
+        }
+        ).catch(error => {
+            console.log(error);
+        }
+        );
+        console.log(response);
+        const tx = {
+            to: response.to,
+            data: response.unsigned_data,
+        }
+        console.log(tx);
+        await signer.sendTransaction(tx).then((tx) => {
+            console.log(tx);
+        }
+        ).catch(error => {
+            console.log(error);
+        }
+        );
+        setIsApproved(true);
     }
 
     return (
@@ -230,15 +357,22 @@ export default function BridgeContainer() {
             <div className="bridge-item">
             {isConnected ? (
                 <div className="button">
-                    {from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '' ? (
-                        <button id="transfer-btn" onClick={transfer}>Convert</button>
-                    ) : (
-                        <button id="transfer-btn-disabled" disabled>Convert</button>
+                    {from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '' && amount > 0 ? (
+                        <div className="convert">
+                            { isApproved ? (
+                                <button id="transfer-btn" onClick={transfer}>{buttonText}</button>
+                            ) : (
+                                <button id="transfer-btn" onClick={approve}>{buttonText}</button>
+                            ) 
+                            }
+                        </div>
+                    ) : (      
+                        <button id="transfer-btn-disabled" disabled>{buttonText}</button>
                     )}
                 </div>
             ) : (
                 <div className="button">
-                    <button id="transfer-btn" onClick={connect}>Connect</button>
+                    <button id="transfer-btn" onClick={connect}>{buttonText}</button>
                 </div>
             )}
             </div>

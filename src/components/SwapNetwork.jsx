@@ -4,7 +4,7 @@ import { DataContext } from "../context/DataContext";
 
 export default function SwapNetwork() {
 
-    const { isConnected, from, setFrom, to, setTo } = useContext(DataContext);
+    const { isConnected, from, setFrom, to, setTo, setToken, setAmount, setFees, setProtocol, setTokenInfo, setIsApproved } = useContext(DataContext);
 
     const swapNetwork = async (from, to) => {
         if (isConnected) {
@@ -27,6 +27,12 @@ export default function SwapNetwork() {
             setFrom(to);
             setTo(from);
         }
+        setToken('');
+        setAmount('');
+        setFees(0);
+        setProtocol('');
+        setTokenInfo(null);
+        setIsApproved(false);
     }
 
     return (

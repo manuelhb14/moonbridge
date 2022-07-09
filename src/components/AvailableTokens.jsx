@@ -3,11 +3,13 @@ import React, { useContext, useEffect } from "react";
 import { DataContext } from "../context/DataContext";
 
 export default function AvailableTokens() {
-    const { from, to, token, setToken, data, setProtocol } = useContext(DataContext);
+    const { from, to, token, setToken, data, setProtocol, setIsApproved, setAmount } = useContext(DataContext);
 
     const onTokenChange = (e) => {
         setToken(e.target.value);
         setProtocol('');
+        setIsApproved(false);
+        setAmount('');
     }
 
     return (

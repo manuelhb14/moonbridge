@@ -17,6 +17,7 @@ export const DataProvider = ({ children }) => {
     const [tokenInfo, setTokenInfo] = useState(null);
     const [txInfo, setTxInfo] = useState(null);
     const [txDetails, setTxDetails] = useState(null);
+    const [isApproved, setIsApproved] = useState(false);
     const [networks, setNetworks] = useState({
         // TODO: get from endpoint instead of hardcoded
         "1": "Ethereum",
@@ -34,7 +35,7 @@ export const DataProvider = ({ children }) => {
     });
 
     return (
-        <DataContext.Provider value={{ from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, networks, setNetworks, isConnected, setIsConnected, account, setAccount, tokenInfo, setTokenInfo, txInfo, setTxInfo, txDetails, setTxDetails }}>
+        <DataContext.Provider value={{ from, setFrom, to, setTo, token, setToken, amount, setAmount, expectedAmount, setExpectedAmount, data, setData, fees, setFees, protocol, setProtocol, networks, setNetworks, isConnected, setIsConnected, account, setAccount, tokenInfo, setTokenInfo, txInfo, setTxInfo, txDetails, setTxDetails, isApproved, setIsApproved }}>
             {children}
         </DataContext.Provider>
     );
