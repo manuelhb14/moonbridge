@@ -5,7 +5,7 @@ import { DataContext } from "../context/DataContext";
 import ExplorerContainer from "../components/ExplorerContainer";
 import txResponse from "../constants/txResponse";
 import Title from "../components/Title";
-
+import SearchBar from "../components/Searchbar";
 
 export default function Explorer() {
 
@@ -18,9 +18,19 @@ export default function Explorer() {
     , []);
 
     return (
-        <div className="explorer">
-            <Title title="Moonbeam Explorer"/>
-            <ExplorerContainer />
-        </div>
+        <main>
+            <div className="top-explorer-section">
+                <Title title="Moonbeam Explorer"/>
+                <center><div className="container-searchbar"> 
+                <SearchBar/>
+                </div></center>
+            </div>
+
+            <div className="bottom-explorer-section">
+                <div className="explorer-table-div"><ExplorerContainer /></div>
+                </div>
+        
+        </main>
+        
     )
 }
