@@ -2,7 +2,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "1",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn1Synapse",
@@ -78,7 +78,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "1",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm1Synapse",
@@ -154,7 +154,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "10",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn10Synapse",
@@ -230,7 +230,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "10",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm10Synapse",
@@ -306,7 +306,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "25",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn25Synapse",
@@ -382,7 +382,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "25",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm25Synapse",
@@ -458,7 +458,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "56",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn56Synapse",
@@ -534,7 +534,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "56",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm56Synapse",
@@ -610,7 +610,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "137",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn137Synapse",
@@ -686,7 +686,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "137",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm137Synapse",
@@ -762,7 +762,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "250",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn250Synapse",
@@ -838,7 +838,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "250",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm250Synapse",
@@ -914,7 +914,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "288",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn288Synapse",
@@ -990,7 +990,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "288",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm288Synapse",
@@ -1066,7 +1066,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "1088",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn1088Synapse",
@@ -1142,7 +1142,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "1088",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm1088Synapse",
@@ -1218,7 +1218,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "1285",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn1285Synapse",
@@ -1294,7 +1294,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "1285",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm1285Synapse",
@@ -1370,7 +1370,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "1285",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18260/small/solarbeamlogo.png",
         "name": "Vested SolarBeam",
         "symbol": "veSOLAR",
         "pairid": "vesolar1285Synapse",
@@ -1446,7 +1446,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "1285",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/17984/small/9285.png",
         "name": "Moonriver",
         "symbol": "MOVR",
         "pairid": "movr1285Synapse",
@@ -1463,13 +1463,6 @@ const response  = [
                     "fromToken": "MOVR",
                     "toToken": "wMOVR",
                     "amountFrom": ""
-                },
-                "BridgeApproval": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
-                    "params": {
-                        "fromChain": "1285",
-                        "fromToken": "MOVR"
-                    }
                 },
                 "BridgeTransaction": {
                     "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",
@@ -1522,7 +1515,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "42161",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn42161Synapse",
@@ -1598,7 +1591,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "42161",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm42161Synapse",
@@ -1674,7 +1667,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "43114",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/18024/small/syn.png",
         "name": "Synapse",
         "symbol": "SYN",
         "pairid": "syn43114Synapse",
@@ -1750,7 +1743,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "43114",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/21129/small/token_wsOHM_logo.png",
         "name": "Olympus DAO",
         "symbol": "gOHM",
         "pairid": "gohm43114Synapse",
@@ -1826,7 +1819,7 @@ const response  = [
     {
         "bridge": "Synapse",
         "srcChainID": "43114",
-        "logoUrl": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png",
+        "logoUrl": "https://assets.coingecko.com/coins/images/12559/small/coin-round-red.png",
         "name": "Avalanche",
         "symbol": "AVAX",
         "pairid": "avax43114Synapse",
@@ -1843,13 +1836,6 @@ const response  = [
                     "fromToken": "AVAX",
                     "toToken": "wAVAX",
                     "amountFrom": ""
-                },
-                "BridgeApproval": {
-                    "baseUrl": "https://syn-api-x.herokuapp.com/v1/generate_unsigned_bridge_approval_txn",
-                    "params": {
-                        "fromChain": "43114",
-                        "fromToken": "AVAX"
-                    }
                 },
                 "BridgeTransaction": {
                     "baseUrl": "https://syn-api-dev.herokuapp.com/v1/generate_unsigned_bridge_txn",

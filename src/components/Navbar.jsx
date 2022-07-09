@@ -4,7 +4,27 @@ import { NavLink, Router, Routes, Route } from "react-router-dom";
 
 export default function Navbar() {
 
-    const { isConnected, setIsConnected, account, setAccount } = useContext(DataContext);
+    const { isConnected, setIsConnected, account, setAccount, setToken, setAmount, setFees, setProtocol, setTokenInfo, setIsApproved, setFrom, setTo } = useContext(DataContext);
+
+    const onChainChange = (chainId) => {
+        // returns hex value of the chain
+        const chain = parseInt(chainId, 16).toString();
+        console.log(chain);
+        if (chain !== process.env.REACT_APP_MOONBEAM_CHAIN_ID) {
+            setFrom(chain);
+            setTo(process.env.REACT_APP_MOONBEAM_CHAIN_ID);
+
+        } else {
+            setFrom(chain);
+            setTo("1");
+        }
+        setToken('');
+        setAmount('');
+        setFees(0);
+        setProtocol('');
+        setTokenInfo(null);
+        setIsApproved(false);
+    } 
 
     const connect = async () => {
         if (window.ethereum) {
@@ -14,6 +34,8 @@ export default function Navbar() {
                 setIsConnected(true);
                 let account = await window.ethereum.request({ method: "eth_accounts" });
                 setAccount(account[0]);
+                const currentChain = await window.ethereum.request({ method: "eth_chainId" });
+                onChainChange(currentChain);
             } catch (error) {
                 console.log('Error connecting to Ethereum');
             }
