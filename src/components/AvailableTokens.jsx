@@ -11,7 +11,7 @@ export default function AvailableTokens() {
     }
 
     return (
-        <select name="token" id="token" onChange={onTokenChange} value={token}>
+        <select name="token" id="token-btn" onChange={onTokenChange} value={token}>
             <option value="">Token</option>
             {from !== process.env.REACT_APP_MOONBEAM_CHAIN_ID ?
             (

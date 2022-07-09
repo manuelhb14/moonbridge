@@ -60,6 +60,7 @@ export default function TransactionDetails() {
             </div>
         <div className="bottom-detail-section">
         <div key="tx-details" >
+            <h3>Transaction Details</h3>
             {txDetails ?
                 (   
                      <div className="table-responsive bottom">

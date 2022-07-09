@@ -46,15 +46,22 @@ export default function Navbar() {
     }
 
     const nav = () => {
-      var nav = document.getElementsByTagName("nav")[0];
-      var toggler = document.getElementById("nav-toggler");
-      if (toggler.classList.contains("open")) {
+        var nav = document.getElementsByTagName("nav")[0];
+        var toggler = document.getElementById("nav-toggler");
+        if (toggler.classList.contains("open")) {
           nav.classList.remove("open");
           toggler.classList.remove("open");
         } else {
           nav.classList.add("open");
           toggler.classList.add("open");
         }
+    }
+
+    const closeNav = () => {
+        var nav = document.getElementsByTagName("nav")[0];
+        var toggler = document.getElementById("nav-toggler");
+        nav.classList.remove("open");
+        toggler.classList.remove("open");
     }
 
     return (
@@ -65,16 +72,16 @@ export default function Navbar() {
             <div className="nav-items">
                 <ul>
                     <li>
-                        <NavLink to="/bridge" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge < img className="icon" src="assets/icons/arrow.svg" alt="arrow " />  </NavLink>
+                        <NavLink to="/bridge" onClick={closeNav} className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge < img className="icon" src="assets/icons/arrow.svg" alt="arrow " />  </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/explorer" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Explorer < img className="icon" src="assets/icons/arrow.svg" alt="arrow " /> </NavLink>
+                        <NavLink to="/explorer" onClick={closeNav} className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Explorer < img className="icon" src="assets/icons/arrow.svg" alt="arrow " /> </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/" className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Product </NavLink>
+                        <NavLink to="/" onClick={closeNav} className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Product </NavLink>
                     </li>
                     <li>
-                        <a href="/"> Docs </a>
+                        <NavLink to="/" onClick={closeNav}> Docs </NavLink>
                     </li>
                 </ul>
                 <div className="account">
@@ -94,9 +101,9 @@ export default function Navbar() {
                     }
                 </div>
                 <a href="javascript:;" id="nav-toggler" onClick={nav}>
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
+                    <div className="bar1"></div>
+                    <div className="bar2"></div>
+                    <div className="bar3"></div>
                 </a>
             </div>
         </nav>
