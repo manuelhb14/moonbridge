@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
         
     return (
-        <div className='main-bg'>
+        <main>
             <Router>
                 <Navbar />
                     <Routes>
@@ -22,7 +22,7 @@ function App() {
                         <Route path="/tx/:txHash" element={ <TransactionDetails /> } />
                     </Routes>
             </Router>
-        </div>
+        </main>
         
     );
 }

@@ -1,18 +1,36 @@
 import React, { useContext } from "react";
-
+import { ethers } from "ethers";
 import { DataContext } from "../context/DataContext";
 
 export default function SwapNetwork() {
 
-    const { from, setFrom, to, setTo } = useContext(DataContext);
+    const { isConnected, from, setFrom, to, setTo } = useContext(DataContext);
 
-    const swapNetwork = (from, to) => {
-        setFrom(to);
-        setTo(from);
+    const swapNetwork = async (from, to) => {
+        if (isConnected) {
+            const oldFrom = from;
+            const oldTo = to;
+            setFrom(to);
+            setTo(from);
+            const hexId = ethers.utils.hexValue(ethers.utils.hexlify(parseInt(to)));
+            console.log(hexId);
+            await window.ethereum.request({
+                method: 'wallet_switchEthereumChain',
+                params: [{ chainId: hexId }]
+            }).catch(error => {
+                console.log(error);
+                setFrom(oldFrom);
+                setTo(oldTo);
+            }
+            );
+        } else {
+            setFrom(to);
+            setTo(from);
+        }
     }
 
     return (
-        <button onClick={() => swapNetwork(from, to)}>Swap</button>
+        <button id="swap-network" onClick={() => swapNetwork(from, to)}>Swap</button>
     )
 
 }
