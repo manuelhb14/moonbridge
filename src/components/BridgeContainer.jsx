@@ -22,10 +22,9 @@ export default function BridgeContainer() {
     const [isPending, setIsPending] = useState(false);
 
     useEffect(() => {
-        if (isConnected) {
-            window.ethereum.autoRefreshOnNetworkChange = false;
-            window.ethereum.on('chainChanged', onChainChange);
-        }
+        window.ethereum.autoRefreshOnNetworkChange = false;
+        window.ethereum.on('chainChanged', onChainChange);
+        console.log("listening chain changed events")
     }, []);
     
     useEffect(() => {

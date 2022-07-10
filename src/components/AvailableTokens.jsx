@@ -84,6 +84,7 @@ export default function AvailableTokens() {
             options={tokens}
             onChange={onTokenChange}
             placeholder="Token"
+            value={ tokens. find(item => item.value === token) ? tokens.find(item => item.value === token) : null }
             formatOptionLabel={(option) => (
                 <div className="select-option">
                     <img src={option.image} height="25px" width="25px" alt="logo" />
