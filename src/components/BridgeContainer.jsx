@@ -497,7 +497,7 @@ export default function BridgeContainer() {
             <div className="bridge-item">
             {isConnected ? (
                 <div className="button">
-                    {from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '' && amount > 0 && amount < balance && amount > fees ? (
+                    {from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '' && amount > 0 && amount <= balance && amount > fees ? (
                         <div className="convert">
                             { isApproved ? (
                                 <button id={ !isPending ? "transfer-btn" : "transfer-btn-disabled" } onClick={transfer}>{buttonText}</button>
