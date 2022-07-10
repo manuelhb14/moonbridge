@@ -32,7 +32,7 @@ export default function ExplorerContainer() {
             <div className="table-responsive">
                 <table className="table explorer">
                     <thead>
-                    <tr>
+                    <tr className="ts-sec">
                         <th>Transaction Hash</th>
                         <th>Coin Type</th>
                         <th>Value</th>
@@ -43,15 +43,15 @@ export default function ExplorerContainer() {
                         <th>Protocol</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="ts-main">
                     {txInfo ? txInfo.map((item) => {
                         return <tr key={item.txid}>
                             <td><NavLink to={`/tx/${item.txid}`}>{formatHash(item.txid)}</NavLink></td>
                             <td>{item.token}</td>
-                            <td>Sent: {item.formatvalue} <span className="spanexplorer"> <br />Received: {item.formatvalue}</span></td>
+                            <td>Sent: {item.formatvalue} <span className="spanexplorer ts-small"> <br />Received: {item.formatvalue}</span></td>
                             <td>{networks[item.srcChainId]}</td>
                             <td>{networks[item.destChainId]}</td>
-                            <td>{formatDate(item.timestamp)} <span className="spanexplorer"><br />{getTimeAgo(item.timestamp)}</span></td>
+                            <td>{formatDate(item.timestamp)} <span className="spanexplorer ts-small"><br />{getTimeAgo(item.timestamp)}</span></td>
                             <td>{item.status}</td>
                             <td>{item.bridge}</td>
                         </tr>

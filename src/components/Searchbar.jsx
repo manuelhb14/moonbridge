@@ -7,11 +7,13 @@ const SearchBar = () => {
 
   return (
     <div class="d-flex form-inputs">
+
       <input class="form-control" type="text"  placeholder="Search transaction hash" value={search} onChange={(e) => setSearch(e.target.value)} />
       <NavLink to={`/tx/${search}`} className="btn">
         <Icon icon="bx:search" color="#21bfdc" width="30" hFlip={true} />
       </NavLink>
     </div> 
+
 
   );
 }
