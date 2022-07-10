@@ -40,9 +40,12 @@ export default function Bridge() {
 
 
     return (
-        <section className="bridge container">
-            <Title title="Moonbeam Token Bridge"/>
-            <BridgeContainer />
-        </section>
+        <main>
+            <section className="bridge container">
+                <Title title="Moonbeam Token Bridge"/>
+                <BridgeContainer />
+            </section>
+        </main>
+        
     )
 }
