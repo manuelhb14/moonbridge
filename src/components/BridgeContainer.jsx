@@ -18,6 +18,7 @@ export default function BridgeContainer() {
     const { isConnected, setIsConnected, setAccount, from, to, token, amount, protocol, tokenInfo, setFrom, setTo, setToken, setAmount, setFees, setProtocol, setTokenInfo, isApproved, setIsApproved } = useContext(DataContext);
 
     const [buttonText, setButtonText] = useState("Connect");
+    const [balance, setBalance] = useState(0);
 
     useEffect(() => {
         if (isConnected) {
@@ -25,17 +26,26 @@ export default function BridgeContainer() {
             window.ethereum.on('chainChanged', onChainChange);
         }
     }, []);
-
-    useEffect(() => {
-        checkStatus();
-    }, [isConnected, from, to, token, amount, protocol, tokenInfo, isApproved]);
-
+    
     useEffect(() => {
         if (tokenInfo) {
             checkAllowance();
         }
     }
     , [tokenInfo]);
+
+    useEffect(() => {
+        checkStatus();
+    }, [isConnected, from, to, token, amount, protocol, tokenInfo, isApproved]);
+
+    useEffect(() => {
+        if (token !== '' && tokenInfo && protocol !== '') {
+            getTokenBalance();
+        } else {
+            setBalance(0);
+        }
+    }
+    , [token, from, tokenInfo, protocol]);
 
     const checkAllowance = async () => {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -127,7 +137,7 @@ export default function BridgeContainer() {
         if (from === tokenInfo.srcChainID) {
             if (tokenInfo.SrcToken.ContractAddress) {
                 const contract = new ethers.Contract(tokenInfo.SrcToken.ContractAddress, erc20abi, signer);
-                await contract.transfer(ethers.utils.getAddress(tokenInfo.SrcToken.ContractInfo.DepositAddress), ethers.utils.parseEther(amount)).then((tx) => {
+                await contract.transfer(ethers.utils.getAddress(tokenInfo.SrcToken.ContractInfo.DepositAddress), ethers.utils.parseUnits(amount, tokenInfo.SrcToken.Decimals)).then((tx) => {
                     console.log(tx);
                 }
                 ).catch(error => {
@@ -329,13 +339,53 @@ export default function BridgeContainer() {
         setIsApproved(true);
     }
 
+    const getTokenBalance = async () => {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        await console.log(tokenInfo);
+        if (from === tokenInfo.srcChainID) {
+            if (tokenInfo.SrcToken.ContractAddress) {
+                const contract = new ethers.Contract(tokenInfo.SrcToken.ContractAddress, erc20abi, signer);
+                await contract.balanceOf(signer.getAddress()).then((balance) => {
+                    setBalance(ethers.utils.formatUnits(balance, tokenInfo.SrcToken.Decimals));
+                }
+                ).catch(error => {
+                    console.log(error);
+                }
+                );
+            } else {
+                await signer.getBalance().then((balance) => {
+                    setBalance(ethers.utils.formatUnits(balance, 18));
+                }
+                ).catch(error => {
+                    console.log(error);
+                }
+                );
+            }
+        } else {
+            const contract = new ethers.Contract(tokenInfo.DestToken.ContractAddress, erc20abi, signer);
+            await contract.balanceOf(signer.getAddress()).then((balance) => {
+                console.log(balance);
+                setBalance(ethers.utils.formatUnits(balance, tokenInfo.DestToken.Decimals));
+            }
+            ).catch(error => {
+                console.log(error);
+            }
+            );
+        }
+    }
+
+    const setAmountOnClick = async () => {
+        setAmount(balance);
+    }
+
     return (
         <div className="bridge-container container">
             <div className="bridge-item">
                 <span className="text">From</span><AvailableNetworks value="from" />
             </div>
             <div className="bridge-item text-right">
-                <small className="text"><u>Max:</u></small>
+                <small className="text" onClick={setAmountOnClick}><u>Max: {balance}</u></small>
                 <br />
                 <div className="input-textEselect">
                     <InputAmount /><AvailableTokens />
