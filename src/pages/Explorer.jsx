@@ -17,6 +17,17 @@ export default function Explorer() {
     }
     , []);
 
+    // useEffect(() => {
+    //     fetch("https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-41813a12-6cd0-49c0-abb9-68838a3e1f30/default/explorerTxns")
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             setTxInfo(data);
+    //         }
+    //         )
+    // }
+    // , []);
+
     return (
         <main className="explorer">
             <div className="top-explorer-section">

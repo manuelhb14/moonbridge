@@ -2,19 +2,24 @@ import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 
-import txDetailsResponse from "../constants/txDetailsResponse";
-
 export default function TransactionDetails() {
     const { networks, txDetails, setTxDetails } = useContext(DataContext);
 
     const { txHash } = useParams();
-    
+
     useEffect(() => {
-        const data = txDetailsResponse;
-        setTxDetails(data);
+        const url = `https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-41813a12-6cd0-49c0-abb9-68838a3e1f30/default/explorertxndetails?hash=${txHash}`;
+        console.log(url);
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setTxDetails(data);
+            }
+            )
     }
-    , []);
-    
+        , []);
+
     const formatDate = (date) => {
         const d = new Date(date * 1000);
         return d.toLocaleString();
@@ -54,69 +59,70 @@ export default function TransactionDetails() {
 
     return (
         <main className="transaction-detail">
-             <div className="top-detail-section">
+            <div className="top-detail-section">
                 <div className="top-detail-subtitle">Transaction details </div>
-                <br/>
+                <br />
             </div>
-        <div className="bottom-detail-section">
-        <div key="tx-details" className="detail-table-div">
-            {txDetails ?
-                (   
-                     <div className="table-responsive bottom">
-                     <table className="table info ts-main">
-                    
-                     <tr>
-                        <td>Source Hash:</td>
-                        <td><a className="detail-a" href={getExplorerUrl(txDetails.srcChainId, "tx/" + txDetails.txid)} target="_blank">{txDetails.txid}</a></td>
-                    </tr>
-                    <tr>
-                        <td>Destination Hash:</td>
-                        <td> <a className="detail-a" href={getExplorerUrl(txDetails.destChainId, "tx/" + txDetails.swaptx)} target="_blank">{txDetails.swaptx}</a></td>
-                    </tr>
-                    <tr>
-                        <td>Source Chain:</td>
-                        <td> <span className="infodata">{networks[txDetails.srcChainId]}</span></td>
-                    </tr>
-                    <tr>
-                        <td>Destination Chain:</td>
-                        <td><span className="infodata"> {networks[txDetails.destChainId]}</span></td>
-                    </tr>
-                    <tr>
-                        <td>Address:</td>
-                        <td> <a className="detail-a" href={getExplorerUrl(txDetails.srcChainId, "address/" + txDetails.from)} target="_blank">{txDetails.from}</a></td>
-                    </tr>
-                    <tr>
-                        <td>Date:</td>
-                        <td> <span className="infodata">{formatDate(txDetails.timestamp)}</span></td>
-                    </tr>
-                    <tr>
-                        <td>Coin Type:</td>
-                        <td> <span className="infodata">{txDetails.token}</span></td>
-                    </tr>
-                    <tr>
-                        <td>Send Value:</td>
-                        <td> <span className="infodata">{txDetails.formatvalue}</span></td>
-                    </tr>
-                    <tr>
-                        <td>Receive Value:</td>
-                        <td><span className="infodata">{txDetails.formatswapvalue}</span></td>
-                    </tr>
-                    <tr>
-                        <td>Status:</td>
-                        <td><span className="infodata">{txDetails.status}</span></td>
-                    </tr>
-                    <tr>
-                        <td>Protocol:</td>
-                        <td><span className="infodata">{txDetails.bridge}</span></td>
-                    </tr>
-                    </table>
-                     </div>
-                   
+            <div className="bottom-detail-section">
+                <div key="tx-details" className="detail-table-div">
+                    {txDetails ?
+                        (
+                            <div className="table-responsive bottom">
+                                <table className="table info ts-main">
+                                    <tbody>
+                                        <tr>
+                                            <td>Source Hash:</td>
+                                            <td><a className="detail-a" href={getExplorerUrl(txDetails.srcChainId, "tx/" + txDetails.txid)} target="_blank">{txDetails.txid}</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Destination Hash:</td>
+                                            <td> <a className="detail-a" href={getExplorerUrl(txDetails.destChainId, "tx/" + txDetails.swaptx)} target="_blank">{txDetails.swaptx}</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Source Chain:</td>
+                                            <td> <span className="infodata">{networks[txDetails.srcChainId]}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Destination Chain:</td>
+                                            <td><span className="infodata"> {networks[txDetails.destChainId]}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Address:</td>
+                                            <td> <a className="detail-a" href={getExplorerUrl(txDetails.srcChainId, "address/" + txDetails.from)} target="_blank">{txDetails.from}</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date:</td>
+                                            <td> <span className="infodata">{formatDate(txDetails.timestamp)}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Coin Type:</td>
+                                            <td> <span className="infodata">{txDetails.token}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Send Value:</td>
+                                            <td> <span className="infodata">{txDetails.formatvalue}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Receive Value:</td>
+                                            <td><span className="infodata">{txDetails.formatswapvalue}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status:</td>
+                                            <td><span className="infodata">{txDetails.status}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Protocol:</td>
+                                            <td><span className="infodata">{txDetails.bridge}</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                ) : null}
-        </div>
-        </div>
+
+                        ) : null}
+                </div>
+            </div>
         </main>
     )
-    
+
 }
