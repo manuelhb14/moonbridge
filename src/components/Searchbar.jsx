@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Icon } from '@iconify/react';
-
+import { NavLink } from "react-router-dom";
 const SearchBar = () => {
+
+  const [search, setSearch] = useState("");
+
   return (
-   
     <div class="d-flex form-inputs">
-    <input class="form-control" type="text"  placeholder="Search by address or hash txn"></input>
-    <button className="btn"><Icon icon="bx:search" color="#21bfdc" width="16" hFlip={true} /></button></div> 
+
+      <input class="form-control" type="text"  placeholder="Search transaction hash" value={search} onChange={(e) => setSearch(e.target.value)} />
+      <NavLink to={`/tx/${search}`} className="btn">
+        <Icon icon="bx:search" color="#21bfdc" width="30" hFlip={true} />
+      </NavLink>
+    </div> 
+
 
   );
 }
