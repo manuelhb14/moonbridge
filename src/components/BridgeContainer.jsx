@@ -113,6 +113,7 @@ export default function BridgeContainer() {
                 console.log('Multichain');
                 transferMultichain();
             } else if (protocol === 'Synapse') {
+                console.log('Synapse');
                 transferSynapse();
             }
         } else {
@@ -207,6 +208,7 @@ export default function BridgeContainer() {
                     data: response.unsigned_data,
                     gasLimit: response.gasLimit
                 }
+                console.log(tx);
                 await signer.sendTransaction(tx).then((tx) => {
                     console.log(tx);
                 }
@@ -237,10 +239,9 @@ export default function BridgeContainer() {
             console.log(response);
             const tx = {
                 to: response.to,
-                value: response.value,
-                data: response.data,
-                gasLimit: response.gasLimit
+                data: response.unsigned_data,
             }
+            console.log(tx);
             // eslint-disable-next-line no-undef
             await signer.sendTransaction(tx).then((tx) => {
                 console.log(tx);

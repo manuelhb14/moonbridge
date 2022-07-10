@@ -40,6 +40,7 @@ export default function Fees() {
                     response = res;
                     setExpectedAmount(response.amountToReceive / 10 ** tokenInfo.DestToken.Decimals);
                     setFees(response.bridgeFee / 10 ** tokenInfo.DestToken.Decimals);
+                    console.log(response);
                 }
                 ).catch(err => {
                     console.log(err);
