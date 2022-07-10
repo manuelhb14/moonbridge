@@ -53,26 +53,25 @@ export default function TransactionDetails() {
 
 
     return (
-        <main>
+        <main className="transaction-detail">
              <div className="top-detail-section">
                 <div className="top-detail-subtitle">Transaction details </div>
                 <br/>
             </div>
         <div className="bottom-detail-section">
-        <div key="tx-details" >
-            <h3>Transaction Details</h3>
+        <div key="tx-details" className="detail-table-div">
             {txDetails ?
                 (   
                      <div className="table-responsive bottom">
-                     <table className="table info">
+                     <table className="table info ts-main">
                     
                      <tr>
                         <td>Source Hash:</td>
-                        <td><a href={getExplorerUrl(txDetails.srcChainId, "tx/" + txDetails.txid)} target="_blank">{txDetails.txid}</a></td>
+                        <td><a className="detail-a" href={getExplorerUrl(txDetails.srcChainId, "tx/" + txDetails.txid)} target="_blank">{txDetails.txid}</a></td>
                     </tr>
                     <tr>
                         <td>Destination Hash:</td>
-                        <td> <a href={getExplorerUrl(txDetails.destChainId, "tx/" + txDetails.swaptx)} target="_blank">{txDetails.swaptx}</a></td>
+                        <td> <a className="detail-a" href={getExplorerUrl(txDetails.destChainId, "tx/" + txDetails.swaptx)} target="_blank">{txDetails.swaptx}</a></td>
                     </tr>
                     <tr>
                         <td>Source Chain:</td>
@@ -84,7 +83,7 @@ export default function TransactionDetails() {
                     </tr>
                     <tr>
                         <td>Address:</td>
-                        <td> <a href={getExplorerUrl(txDetails.srcChainId, "address/" + txDetails.from)} target="_blank">{txDetails.from}</a></td>
+                        <td> <a className="detail-a" href={getExplorerUrl(txDetails.srcChainId, "address/" + txDetails.from)} target="_blank">{txDetails.from}</a></td>
                     </tr>
                     <tr>
                         <td>Date:</td>
