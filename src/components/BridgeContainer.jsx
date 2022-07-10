@@ -19,6 +19,7 @@ export default function BridgeContainer() {
 
     const [buttonText, setButtonText] = useState("Connect");
     const [balance, setBalance] = useState(0);
+    const [isPending, setIsPending] = useState(false);
 
     useEffect(() => {
         if (isConnected) {
@@ -45,7 +46,7 @@ export default function BridgeContainer() {
             setBalance(0);
         }
     }
-    , [token, from, tokenInfo, protocol]);
+    , [token, from, tokenInfo, protocol, isPending]);
 
     const checkAllowance = async () => {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -118,6 +119,7 @@ export default function BridgeContainer() {
     }
 
     const transfer = () => {
+        setIsPending(true);
         if (from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '') {
             if (protocol === 'Multichain') {
                 console.log('Multichain');
@@ -138,9 +140,22 @@ export default function BridgeContainer() {
             if (tokenInfo.SrcToken.ContractAddress) {
                 const contract = new ethers.Contract(tokenInfo.SrcToken.ContractAddress, erc20abi, signer);
                 await contract.transfer(ethers.utils.getAddress(tokenInfo.SrcToken.ContractInfo.DepositAddress), ethers.utils.parseUnits(amount, tokenInfo.SrcToken.Decimals)).then((tx) => {
+                    setIsPending(false);
                     console.log(tx);
+                    setIsPending(false);
+                    console.log(tx);
+                    listenForTxMined(tx.hash, provider).then((tx) => {
+                        console.log(tx);
+                        setIsPending(false);
+                    }
+                    ).catch(error => {
+                        setIsPending(false);
+                        console.log(error);
+                    }
+                    );
                 }
                 ).catch(error => {
+                    setIsPending(false);
                     console.log(error);
                 }
                 );
@@ -150,9 +165,20 @@ export default function BridgeContainer() {
                     value: ethers.utils.parseUnits(amount, tokenInfo.SrcToken.Decimals)
                 }
                 await signer.sendTransaction(tx).then((tx) => {
+                    setIsPending(true);
                     console.log(tx);
+                    listenForTxMined(tx.hash, provider).then((tx) => {
+                        console.log(tx);
+                        setIsPending(false);
+                    }
+                    ).catch(error => {
+                        setIsPending(false);
+                        console.log(error);
+                    }
+                    );
                 }
                 ).catch(error => {
+                    setIsPending(false);
                     console.log(error);
                 }
                 );
@@ -165,9 +191,20 @@ export default function BridgeContainer() {
             console.log(totalAmount);
             const toAdress = signer.getAddress();
             contract.Swapout(totalAmount, toAdress).then((tx) => {
-                console.log(tx);
+                setIsPending(false);
+                listenForTxMined(tx.hash, provider).then((tx) => {
+                    console.log(tx);
+                    setIsPending(false);
+                }
+                ).catch(error => {
+                    setIsPending(false);
+                    console.log(error);
+                }
+                );
+                
             }
             ).catch(error => {
+                setIsPending(false);
                 console.log(error);
             }
             );
@@ -206,9 +243,20 @@ export default function BridgeContainer() {
                 }
                 console.log(tx);
                 await signer.sendTransaction(tx).then((tx) => {
+                    setIsPending(true);
                     console.log(tx);
+                    listenForTxMined(tx.hash, provider).then((tx) => {
+                        console.log(tx);
+                        setIsPending(false);
+                    }
+                    ).catch(error => {
+                        setIsPending(false);
+                        console.log(error);
+                    }
+                    );                    
                 }
                 ).catch(error => {
+                    setIsPending(false);
                     console.log(error);
                 }
                 ); 
@@ -220,9 +268,20 @@ export default function BridgeContainer() {
                 }
                 console.log(tx);
                 await signer.sendTransaction(tx).then((tx) => {
+                    setIsPending(true);
                     console.log(tx);
+                    listenForTxMined(tx.hash, provider).then((tx) => {
+                        console.log(tx);
+                        setIsPending(false);
+                    }
+                    ).catch(error => {
+                        setIsPending(false);
+                        console.log(error);
+                    }
+                    );
                 }
                 ).catch(error => {
+                    setIsPending(false);
                     console.log(error);
                 }
                 );
@@ -254,9 +313,20 @@ export default function BridgeContainer() {
             console.log(tx);
             // eslint-disable-next-line no-undef
             await signer.sendTransaction(tx).then((tx) => {
+                setIsPending(true);
                 console.log(tx);
+                listenForTxMined(tx.hash, provider).then((tx) => {
+                    console.log(tx);
+                    setIsPending(false);
+                }
+                ).catch(error => {
+                    setIsPending(false);
+                    console.log(error);
+                }
+                );
             }
             ).catch(error => {
+                setIsPending(false);
                 console.log(error);
             }
             ); 
@@ -329,14 +399,24 @@ export default function BridgeContainer() {
             data: response.unsigned_data,
         }
         console.log(tx);
+        setIsPending(true);
         await signer.sendTransaction(tx).then((tx) => {
-            console.log(tx);
+            listenForTxMined(tx.hash, provider).then((tx) => {
+                console.log(tx);
+                setIsApproved(true);
+                setIsPending(false);
+            }
+            ).catch(error => {
+                console.log(error);
+                setIsPending(false);
+            }
+            );
         }
         ).catch(error => {
             console.log(error);
+            setIsPending(false);
         }
         );
-        setIsApproved(true);
     }
 
     const getTokenBalance = async () => {
@@ -379,6 +459,16 @@ export default function BridgeContainer() {
         setAmount(balance);
     }
 
+    const listenForTxMined = async (txHash, provider) => {
+        return new Promise((resolve, reject) => {
+            provider.once(txHash, (txReceipt) => {
+                resolve(txReceipt);
+            }
+            );
+        }
+        );
+    }
+
     return (
         <div className="bridge-container container">
             <div className="bridge-item">
@@ -411,9 +501,9 @@ export default function BridgeContainer() {
                     {from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '' && amount > 0 ? (
                         <div className="convert">
                             { isApproved ? (
-                                <button id="transfer-btn" onClick={transfer}>{buttonText}</button>
+                                <button id={ !isPending ? "transfer-btn" : "transfer-btn-disabled" } onClick={transfer}>{buttonText}</button>
                             ) : (
-                                <button id="transfer-btn" onClick={approve}>{buttonText}</button>
+                                <button id={ !isPending ? "transfer-btn" : "transfer-btn-disabled" } onClick={approve}>{buttonText}</button>
                             ) 
                             }
                         </div>
