@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
-
+import { toast } from "react-toastify";
 import { DataContext } from "../context/DataContext";
+import { NavLink } from "react-router-dom";
 
 import AvailableNetworks from "./AvailableNetworks";
 import SwapNetwork from "./SwapNetwork";
@@ -138,6 +139,7 @@ export default function BridgeContainer() {
         if (from === tokenInfo.srcChainID) {
             if (tokenInfo.SrcToken.ContractAddress) {
                 const contract = new ethers.Contract(tokenInfo.SrcToken.ContractAddress, erc20abi, signer);
+                const transferMultichain = toast.loading('Transfering...');
                 await contract.transfer(ethers.utils.getAddress(tokenInfo.SrcToken.ContractInfo.DepositAddress), ethers.utils.parseUnits(amount, tokenInfo.SrcToken.Decimals)).then((tx) => {
                     setIsPending(false);
                     console.log(tx);
@@ -146,16 +148,39 @@ export default function BridgeContainer() {
                     listenForTxMined(tx.hash, provider).then((tx) => {
                         console.log(tx);
                         setIsPending(false);
+                        toast.update(transferMultichain, {
+                            render: <div>
+                                <div>
+                                    Transfer succesful.
+                                </div>
+                                <NavLink to={`/tx/${tx.transactionHash}`}> View on explorer </NavLink> 
+                                </div>,
+                            type: "success",
+                            isLoading: false,
+                            autoClose: 5000
+                        });
                     }
                     ).catch(error => {
                         setIsPending(false);
                         console.log(error);
+                        toast.update(transferMultichain, {
+                            render: <div> Error {error.message} </div>,
+                            type: "error",
+                            isLoading: false,
+                            autoClose: 5000
+                        });
                     }
                     );
                 }
                 ).catch(error => {
                     setIsPending(false);
                     console.log(error);
+                    toast.update(transferMultichain, {
+                        render: <div> Error {error.message} </div>,
+                        type: "error",
+                        isLoading: false,
+                        autoClose: 5000
+                    });
                 }
                 );
             } else {
@@ -163,22 +188,46 @@ export default function BridgeContainer() {
                     to: tokenInfo.SrcToken.ContractInfo.DepositAddress,
                     value: ethers.utils.parseUnits(amount, tokenInfo.SrcToken.Decimals)
                 }
+                const transferMultichain = toast.loading('Transfering...');
                 await signer.sendTransaction(tx).then((tx) => {
                     setIsPending(true);
                     console.log(tx);
                     listenForTxMined(tx.hash, provider).then((tx) => {
                         console.log(tx);
                         setIsPending(false);
+                        toast.update(transferMultichain, {
+                            render: <div>
+                                <div>
+                                    Transfer succesful.
+                                </div>
+                                <NavLink to={`/tx/${tx.transactionHash}`}> View on explorer </NavLink> 
+                                </div>,
+                            type: "success",
+                            isLoading: false,
+                            autoClose: 5000
+                        });
                     }
                     ).catch(error => {
                         setIsPending(false);
                         console.log(error);
+                        toast.update(transferMultichain, {
+                            render: <div> Error {error.message} </div>,
+                            type: "error",
+                            isLoading: false,
+                            autoClose: 5000
+                        });
                     }
                     );
                 }
                 ).catch(error => {
                     setIsPending(false);
                     console.log(error);
+                    toast.update(transferMultichain, {
+                        render: <div> Error {error.message} </div>,
+                        type: "error",
+                        isLoading: false,
+                        autoClose: 5000
+                    });
                 }
                 );
             }
@@ -189,15 +238,33 @@ export default function BridgeContainer() {
             const totalAmount = ethers.utils.parseUnits(amount, tokenInfo.DestToken.Decimals);
             console.log(totalAmount);
             const toAdress = signer.getAddress();
+            const transferMultichain = toast.loading('Transfering...');
             contract.Swapout(totalAmount, toAdress).then((tx) => {
                 setIsPending(false);
                 listenForTxMined(tx.hash, provider).then((tx) => {
                     console.log(tx);
                     setIsPending(false);
+                    toast.update(transferMultichain, {
+                        render: <div>
+                            <div>
+                                Transfer succesful.
+                            </div>
+                            <NavLink to={`/tx/${tx.transactionHash}`}> View on explorer </NavLink> 
+                            </div>,
+                        type: "success",
+                        isLoading: false,
+                        autoClose: 5000
+                    });
                 }
                 ).catch(error => {
                     setIsPending(false);
                     console.log(error);
+                    toast.update(transferMultichain, {
+                        render: <div> Error {error.message} </div>,
+                        type: "error",
+                        isLoading: false,
+                        autoClose: 5000
+                    });
                 }
                 );
                 
@@ -205,6 +272,12 @@ export default function BridgeContainer() {
             ).catch(error => {
                 setIsPending(false);
                 console.log(error);
+                toast.update(transferMultichain, {
+                    render: <div> Error {error.message} </div>,
+                    type: "error",
+                    isLoading: false,
+                    autoClose: 5000
+                });
             }
             );
         }
@@ -241,22 +314,46 @@ export default function BridgeContainer() {
                     gasLimit: response.gasLimit
                 }
                 console.log(tx);
+                const transferSynapse = toast.loading('Transfering...');
                 await signer.sendTransaction(tx).then((tx) => {
                     setIsPending(true);
                     console.log(tx);
                     listenForTxMined(tx.hash, provider).then((tx) => {
                         console.log(tx);
                         setIsPending(false);
+                        toast.update(transferSynapse, {
+                            render: <div>
+                                <div>
+                                    Transfer succesful.
+                                </div>
+                                <NavLink to={`/tx/${tx.transactionHash}`} className="t-lightblue"> View on explorer </NavLink> 
+                                </div>,
+                            type: "success",
+                            isLoading: false,
+                            autoClose: 5000
+                        });
                     }
                     ).catch(error => {
                         setIsPending(false);
                         console.log(error);
+                        toast.update(transferSynapse, {
+                            render: <div> Error {error.message} </div>,
+                            type: "error",
+                            isLoading: false,
+                            autoClose: 5000
+                        });
                     }
                     );                    
                 }
                 ).catch(error => {
                     setIsPending(false);
                     console.log(error);
+                    toast.update(transferSynapse, {
+                        render: <div> Error {error.message} </div>,
+                        type: "error",
+                        isLoading: false,
+                        autoClose: 5000
+                    });
                 }
                 ); 
             } else {
@@ -266,22 +363,46 @@ export default function BridgeContainer() {
                     gasLimit: response.gasLimit
                 }
                 console.log(tx);
+                const transferSynapse = toast.loading('Transfering...');
                 await signer.sendTransaction(tx).then((tx) => {
                     setIsPending(true);
                     console.log(tx);
                     listenForTxMined(tx.hash, provider).then((tx) => {
                         console.log(tx);
                         setIsPending(false);
+                        toast.update(transferSynapse, {
+                            render: <div>
+                                <div>
+                                    Transfer succesful.
+                                </div>
+                                <NavLink to={`/tx/${tx.transactionHash}`}> View on explorer </NavLink> 
+                                </div>,
+                            type: "success",
+                            isLoading: false,
+                            autoClose: 5000
+                        });
                     }
                     ).catch(error => {
                         setIsPending(false);
                         console.log(error);
+                        toast.update(transferSynapse, {
+                            render: <div> Error {error.message} </div>,
+                            type: "error",
+                            isLoading: false,
+                            autoClose: 5000
+                        });
                     }
                     );
                 }
                 ).catch(error => {
                     setIsPending(false);
                     console.log(error);
+                    toast.update(transferSynapse, {
+                        render: <div> Error {error.message} </div>,
+                        type: "error",
+                        isLoading: false,
+                        autoClose: 5000
+                    });
                 }
                 );
             }
@@ -310,6 +431,7 @@ export default function BridgeContainer() {
                 data: response.unsigned_data,
             }
             console.log(tx);
+            const transferSynapse = toast.loading('Transfering...');
             // eslint-disable-next-line no-undef
             await signer.sendTransaction(tx).then((tx) => {
                 setIsPending(true);
@@ -317,16 +439,39 @@ export default function BridgeContainer() {
                 listenForTxMined(tx.hash, provider).then((tx) => {
                     console.log(tx);
                     setIsPending(false);
+                    toast.update(transferSynapse, {
+                        render: <div>
+                            <div>
+                                Transfer succesful.
+                            </div>
+                            <NavLink to={`/tx/${tx.transactionHash}`}> View on explorer </NavLink> 
+                            </div>,
+                        type: "success",
+                        isLoading: false,
+                        autoClose: 5000
+                    });
                 }
                 ).catch(error => {
                     setIsPending(false);
                     console.log(error);
+                    toast.update(transferSynapse, {
+                        render: <div> Error {error.message} </div>,
+                        type: "error",
+                        isLoading: false,
+                        autoClose: 5000
+                    });
                 }
                 );
             }
             ).catch(error => {
                 setIsPending(false);
                 console.log(error);
+                toast.update(transferSynapse, {
+                    render: <div> Error {error.message} </div>,
+                    type: "error",
+                    isLoading: false,
+                    autoClose: 5000
+                });
             }
             ); 
         }
@@ -399,21 +544,41 @@ export default function BridgeContainer() {
         }
         console.log(tx);
         setIsPending(true);
+        const id = toast.loading('Approving...');
         await signer.sendTransaction(tx).then((tx) => {
             listenForTxMined(tx.hash, provider).then((tx) => {
                 console.log(tx);
                 setIsApproved(true);
                 setIsPending(false);
+                toast.update(id, {
+                    render: "Approved",
+                    type: "success",
+                    isLoading: false,
+                    autoClose: 3000
+                });
             }
             ).catch(error => {
                 console.log(error);
                 setIsPending(false);
+                toast.update(id, {
+                    render: <div>Error {error.message}</div>,
+                    type: "error",
+                    isLoading: false,
+                    autoClose: 3000
+                    
+                });
             }
             );
         }
         ).catch(error => {
             console.log(error);
             setIsPending(false);
+            toast.update(id, {
+                render: <div>Error {error.message}</div>,
+                type: "error",
+                isLoading: false,
+                autoClose: 3000
+            });
         }
         );
     }
@@ -497,7 +662,7 @@ export default function BridgeContainer() {
             <div className="bridge-item">
             {isConnected ? (
                 <div className="button">
-                    {from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '' && amount > 0 && amount <= balance && amount > fees ? (
+                    {from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '' && amount > 0  ? (
                         <div className="convert">
                             { isApproved ? (
                                 <button id={ !isPending ? "transfer-btn" : "transfer-btn-disabled" } onClick={transfer}>{buttonText}</button>
