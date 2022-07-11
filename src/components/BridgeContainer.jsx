@@ -470,10 +470,10 @@ export default function BridgeContainer() {
 
     return (
         <div className="bridge-container container">
-            <div className="bridge-item">
+            <div className="bridge-item with-dropdown">
                 <span className="text">From</span><AvailableNetworks value="from" />
             </div>
-            <div className="bridge-item text-right">
+            <div className="bridge-item with-dropdown-2">
                 <small className="text" onClick={setAmountOnClick}><u>Max: {balance}</u></small>
                 <br />
                 <div className="input-textEselect">
@@ -483,7 +483,7 @@ export default function BridgeContainer() {
             <div className="bridge-item">
                 <SwapNetwork />
             </div>
-            <div className="bridge-item">
+            <div className="bridge-item with-dropdown">
                 <span className="text">To</span><AvailableNetworks value="to" />
             </div>
             <div className="bridge-item">
@@ -491,7 +491,7 @@ export default function BridgeContainer() {
                 <br />
                 <ExpectedAmount />
             </div>
-            <div className="bridge-item">
+            <div className="bridge-item with-dropdown">
                 <span className="text">via Protocol</span><AvailableProtocols />
             </div>
             <div className="bridge-item">
@@ -507,12 +507,12 @@ export default function BridgeContainer() {
                             }
                         </div>
                     ) : (      
-                        <button id="transfer-btn-disabled" disabled>{buttonText}</button>
+                        <button id="transfer-btn" disabled>{buttonText}</button>
                     )}
                 </div>
             ) : (
                 <div className="button">
-                    <button id="transfer-btn" onClick={connect}>{buttonText}</button>
+                    <button id="transfer-btn-disabled" onClick={connect}>{buttonText}</button>
                 </div>
             )}
             </div>
