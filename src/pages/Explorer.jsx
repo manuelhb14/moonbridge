@@ -57,7 +57,7 @@ export default function Explorer() {
             <div class="col-6 col-sm-3 card">
             <div class="row align-items-center">
                 <div class="col-2 col-sm-2 "><img className="logo" src="assets/imgs/logos/moonbeam.png" ></img></div>
-                <div class="col-10 col-sm-10 card-content"><span className="ts-sec"> GLMR PRICE </span><br/> <span className="ts-subtitle">{price}</span></div>
+                <div class="col-10 col-sm-10 card-content"><span className="ts-sec"> GLMR PRICE </span><br/> <span className="ts-subtitle">${price}</span></div>
                 </div>
             </div>
             <div class="col-6 col-sm-3 card">
