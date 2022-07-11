@@ -77,6 +77,45 @@ export default function AvailableTokens() {
     
 
     const customStyles = {
+        container: () => ({
+            flex: '0 0 50%',
+
+        }),
+        option: (provided, state) => ({
+            ...provided,
+            borderBottom: '1px solid var(--lightblue)',
+            color: state.isSelected ? 'white' : 'white',
+            backgroundColor: state.isSelected ? 'var(--greyblue)' : 'var(--greyblue)',
+            padding: '.5rem 1.25rem',
+        }),
+        menu: (provided, state) => ({
+            ...provided,
+            position: 'absolute',
+            zIndex: '1',
+            top: 'unset',
+            width: 'inherit',
+            backgroundColor: 'var(--greyblue)',
+            border: '1px solid var(--lightblue)',
+            color: 'var(--lightblue)',
+            fontSize: '1rem',
+            paddingTop: '0',
+            marginTop: '.5rem',
+        }),
+        control: () => ({
+            border: '0',
+            padding: '0.1rem .15rem',
+            display: 'flex',
+            backgroundColor: 'var(--greyblue)',
+            borderRadius: '0 5px 5px 0',
+            color: 'red',
+
+        }),
+        singleValue: (provided, state) => {
+            const color = 'white';
+            const fontSize = '1rem';
+        
+            return { ...provided, color, fontSize };
+        }
     }
 
     return (
@@ -87,7 +126,7 @@ export default function AvailableTokens() {
             value={ tokens. find(item => item.value === token) ? tokens.find(item => item.value === token) : null }
             formatOptionLabel={(option) => (
                 <div className="select-option">
-                    <img src={option.image} height="25px" width="25px" alt="logo" />
+                    <img src={option.image} alt="logo" />
                     <span>{option.label}</span>
                 </div>
             )}

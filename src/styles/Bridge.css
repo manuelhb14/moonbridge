@@ -1,30 +1,65 @@
-.bridge { align-content: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+::-webkit-scrollbar {
+	display: none;
+}
+
+main { padding-top: 5rem; }
+.bridge { align-content: center; }
 .bridge h1 { color: var(--lightblue); font-size: var(--big-title-text-size); font-weight: 3rem; text-align: center; margin: 2rem 0; }
-.bridge .bridge-container { border: 1px solid var(--lightblue); border-radius: 5px; padding: 1.6rem 15px; display: flex; flex-direction: column; flex-wrap: nowrap; align-content: center; justify-content: space-evenly; align-items: stretch; max-width: 670px; width: 50vw; background-color: var(--darkblue); }
-.bridge .bridge-container .bridge-item { padding: .75rem; }
-.bridge .bridge-container .bridge-item span.text { font-size: 1.2rem; color: var(--lightblue); margin: 0 1rem 0 0; }
-.bridge .bridge-container .bridge-item small.text { font-size: .75rem; color: var(--lightblue); }
+.bridge .bridge-container { border: 1px solid var(--lightblue); border-radius: 5px; padding: 1.6rem 15px; display: flex; flex-direction: column; flex-wrap: nowrap; align-content: center; justify-content: space-evenly; align-items: stretch; max-width: 670px; width: 50vw; }
+.bridge .bridge-container .bridge-item { padding: .7rem; }
+.bridge .bridge-container .bridge-item.with-dropdown { display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: flex-start; align-items: baseline; }
+
+.bridge .bridge-container .bridge-item.with-dropdown-2 u { cursor: pointer; }
+.bridge .bridge-container :is(.bridge-item.with-dropdown, .bridge-item.with-dropdown-2) .select-option img { width: 1.2rem; height: auto; vertical-align: text-bottom; margin-right: .5rem; }
+
+
+/* .bridge .bridge-container .bridge-item.with-dropdown .dropdown { }
+.bridge .bridge-container .bridge-item.with-dropdown .dropdown .dropdown-toggle { color: var(--lightblue); background-color: var(--greyblue); font-size: 1.2rem; outline: none; border: 1px solid var(--lightblue); border-radius: 5px; padding: .5rem .75rem; }
+.bridge .bridge-container .bridge-item.with-dropdown .dropdown .dropdown-toggle::after { display: none; }
+.bridge .bridge-container .bridge-item.with-dropdown .dropdown .dropdown-toggle img.arrow { width: 1.5rem; height: auto; margin-left: .255em; vertical-align: text-bottom; filter: var(--filter-blue); }
+.bridge .bridge-container .bridge-item.with-dropdown .dropdown .dropdown-toggle .crypto-icon { width: 1.5rem; height: auto; vertical-align: text-bottom; margin-right: .5rem; } */
+
+/* .bridge .bridge-container :is(.bridge-item.with-dropdown, .bridge-item.with-dropdown-2) .dropdown .dropdown-menu { background-color: var(--greyblue); margin-top: .5rem; border-radius: 5px; border: 1px solid var(--lightblue); padding: 0; }
+.bridge .bridge-container :is(.bridge-item.with-dropdown, .bridge-item.with-dropdown-2) .dropdown a.dropdown-item { text-decoration: none; color: var(--lightblue); border-top: 1px solid var(--lightblue); font-size: 1rem; padding: .5rem 1.25rem; }
+.bridge .bridge-container :is(.bridge-item.with-dropdown, .bridge-item.with-dropdown-2) .dropdown a.dropdown-item:hover { background-color: unset; }
+.bridge .bridge-container :is(.bridge-item.with-dropdown, .bridge-item.with-dropdown-2) .dropdown a.dropdown-item:first-child { border: 0; }
+.bridge .bridge-container :is(.bridge-item.with-dropdown, .bridge-item.with-dropdown-2) .dropdown a.dropdown-item:last-child {  }
+.bridge .bridge-container :is(.bridge-item.with-dropdown, .bridge-item.with-dropdown-2) .dropdown a.dropdown-item .crypto-icon { width: 1.2rem; height: auto; vertical-align: text-bottom; margin-right: .5rem; } */
+
+/* .bridge .bridge-container .bridge-item.with-dropdown-2 { display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: flex-start; align-items: baseline; }
+.bridge .bridge-container .bridge-item.with-dropdown-2 .dropdown { width: 100%; }
+.bridge .bridge-container .bridge-item.with-dropdown-2 .dropdown .dropdown-toggle { width: 100%; text-align: right; color: white; background-color: var(--greyblue); font-size: 1rem; outline: none; border: 0; border-radius: 0 5px 5px 0; padding: .5rem .75rem; }
+.bridge .bridge-container .bridge-item.with-dropdown-2 .dropdown .dropdown-toggle::after { display: none; }
+.bridge .bridge-container .bridge-item.with-dropdown-2 .dropdown .dropdown-toggle img.arrow { width: 1.2rem; height: auto; margin-left: .255em; vertical-align: text-bottom; filter: invert(1000%); }
+.bridge .bridge-container .bridge-item.with-dropdown-2 .dropdown .dropdown-toggle .crypto-icon { width: 1.2rem; height: auto; vertical-align: text-bottom; margin-right: .5rem; } */
+
+/* .bridge .bridge-container .bridge-item.with-dropdown-2 .dropdown .dropdown-menu.show { right: 0; } */
+
+
+
+.bridge .bridge-container .bridge-item span.text { font-size: 1rem; color: var(--lightblue); margin: 0 1rem 0 0; white-space: nowrap; }
+.bridge .bridge-container .bridge-item small.text { font-size: .7rem; color: var(--lightblue); }
 .bridge .bridge-container .bridge-item.fees { padding-top: 0; }
 .bridge .bridge-container .bridge-item.fees p { text-align: center; margin: 0; color: var(--lightblue); font-size: .75rem; }
 
-.bridge .bridge-container .bridge-item select { color: var(--lightblue); background-color: var(--greyblue); font-size: 1.2rem; outline: none; border: 1px solid var(--lightblue); border-radius: 5px; padding: .5rem .75rem;  }
-.bridge .bridge-container .bridge-item select option { font-size: .8rem; }
+.bridge .bridge-container .bridge-item select { color: var(--lightblue); background-color: var(--greyblue); font-size: 1rem; outline: none; border: 1px solid var(--lightblue); border-radius: 5px; padding: .5rem .75rem;  }
+/* .bridge .bridge-container .bridge-item select option { font-size: .8rem; } */
 .bridge .bridge-container .bridge-item input[type=text] { outline: none; background-color: var(--greyblue); border-radius: 5px 0 0 5px; border: 0; color: white; padding: .5rem .75rem; width: 25%; font-size: 1rem; width: 100%; flex: 0 0 65% }
 
 .bridge .bridge-container .bridge-item .input-textEselect { text-align: left; display: flex; flex-direction: row; flex-wrap: nowrap; align-content: stretch; justify-content: flex-start; align-items: center; }
 .bridge .bridge-container .bridge-item .input-textEselect input[type=number] { outline: none; background-color: var(--greyblue); border-radius: 5px 0 0 5px; border: 0; color: white; padding: .5rem .75rem; width: 100%; font-size: 1rem; width: 100%; flex: 0 0 50%; }
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 
-#swap-network { background: var(--greyblue); border: 1px solid var(--lightblue); color: var(--lightblue); }
-
+#swap-network { background: transparent; border: 0; outline: none; }
+#swap-network img { width: 2.2rem; height: auto; }
 #token-btn { border: 0; border-radius: 0 5px 5px 0; padding: .6rem .75rem; width: 100%; font-size: 1rem; width: 100%; flex: 0 0 50%; text-align: right; }
 
-#transfer-btn { width: 100%; border: 0; background-color: var(--pink); color: white; font-size: 1.2rem; border-radius: 5px; padding: .8rem 0; box-shadow: 0px 0px 5px 0px rgba(225,20,123,0.4); }
-#transfer-btn-disabled { width: 100%; border: 0; background-color: var(--pink); color: white; font-size: 1.2rem; border-radius: 5px; padding: .8rem 0; box-shadow: 0px 0px 5px 0px rgba(225,20,123,0.4); opacity: 0.6;}
+#transfer-btn { width: 100%; border: 0; background-color: var(--pink); color: white; font-size: 1rem; border-radius: 5px; padding: .8rem 0; box-shadow: 0px 0px 5px 0px rgba(225,20,123,0.4); }
+#transfer-btn-disabled { width: 100%; border: 0; background-color: var(--greyblue); color: white; font-size: 1rem; border-radius: 5px; padding: .8rem 0; box-shadow: unset; }
 
 
 /**********Large (lg)**********/
@@ -36,7 +71,7 @@ input::-webkit-inner-spin-button {
 	.bridge h1 { font-size: 2.5rem;}
 	.bridge .bridge-container { padding: .5rem 15px; }
 	.bridge .bridge-container .bridge-item span.text { font-size: .9rem; margin: 0 1rem 0 0; }
-	.bridge .bridge-container .bridge-item small.text { font-size: .75rem; }
+	.bridge .bridge-container .bridge-item small.text { font-size: .75rem; white-space: wrap; }
 	.bridge .bridge-container .bridge-item select { font-size: .9rem; }
 	.bridge .bridge-container .bridge-item select option { font-size: .7rem; }
 	.bridge .bridge-container .bridge-item.fees p { font-size: .65rem; }

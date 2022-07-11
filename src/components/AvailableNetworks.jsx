@@ -73,6 +73,39 @@ export default function AvailableNetworks({value}) {
     ]
 
     const customStyles = {
+        option: (provided, state) => ({
+            ...provided,
+            borderBottom: '1px solid var(--lightblue)',
+            color: state.isSelected ? 'var(--lightblue)' : 'var(--lightblue)',
+            backgroundColor: state.isSelected ? 'var(--greyblue)' : 'var(--greyblue)',
+            padding: '.5rem 1.25rem',
+        }),
+        menu: (provided, state) => ({
+            ...provided,
+            position: 'absolute',
+            zIndex: '1',
+            backgroundColor: 'var(--greyblue)',
+            border: '1px solid var(--lightblue)',
+            color: 'var(--lightblue)',
+            fontSize: '.9rem',
+            paddingTop: '0',
+            marginTop: '.5rem',
+        }),
+        control: () => ({
+            border: '1px solid var(--lightblue)',
+            padding: '0 .15rem',
+            display: 'flex',
+            backgroundColor: 'var(--greyblue)',
+            borderRadius: '5px',
+            color: 'red',
+
+        }),
+        singleValue: (provided, state) => {
+            const color = 'var(--lightblue)';
+            const fontSize = '.9rem';
+        
+            return { ...provided, color, fontSize };
+        }
     }
 
     return (
