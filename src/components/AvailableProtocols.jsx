@@ -43,6 +43,48 @@ export default function AvailableProtocols() {
     }
 
     const customStyles = {
+        container: () => ({
+            width: '100%',
+            position: 'relative',
+
+        }),
+        option: (provided, state) => ({
+            ...provided,
+            borderBottom: '1px solid var(--lightblue)',
+            color: state.isSelected ? 'var(--lightblue)' : 'var(--lightblue)',
+            backgroundColor: state.isSelected ? 'var(--greyblue)' : 'var(--greyblue)',
+            padding: '.5rem 1.25rem',
+        }),
+        menu: (provided, state) => ({
+            ...provided,
+            position: 'absolute',
+            zIndex: '1',
+            top: 'unset',
+            backgroundColor: 'var(--greyblue)',
+            border: '1px solid var(--lightblue)',
+            color: 'var(--lightblue)',
+            fontSize: '1rem',
+            paddingTop: '0',
+            marginTop: '.5rem',
+            width: 'inherit',
+            maxWidth: 'inherit',
+        }),
+        control: () => ({
+            border: '1px solid var(--lightblue)',
+            padding: '.2rem .15rem',
+            display: 'flex',
+            backgroundColor: 'var(--greyblue)',
+            borderRadius: '5px',
+            color: 'red',
+            width: '100%',
+
+        }),
+        singleValue: (provided, state) => {
+            const color = 'var(--lightblue)';
+            const fontSize = '1.2rem';
+        
+            return { ...provided, color, fontSize };
+        }
     }
     
     return (
