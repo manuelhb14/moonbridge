@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Rings } from "react-loader-spinner";
 import { DataContext } from "../context/DataContext";
 
 export default function TransactionDetails() {
@@ -119,7 +120,12 @@ export default function TransactionDetails() {
                             </div>
 
 
-                        ) : null}
+                        ) : <Rings
+                                height={100}
+                                width={100}
+                                color="#21BFDC"
+                                ariaLabel="Loading"
+                            />}
                 </div>
             </div>
         </main>

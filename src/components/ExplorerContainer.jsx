@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import TimeAgo from 'javascript-time-ago'
 import en from 'javascript-time-ago/locale/en'
 import { NavLink } from "react-router-dom";
-
+import { Rings } from "react-loader-spinner";
 import { DataContext } from "../context/DataContext";
 
 export default function ExplorerContainer() {
@@ -56,7 +56,12 @@ export default function ExplorerContainer() {
                             <td>{item.bridge}</td>
                         </tr>
                     }
-                    ) : null}
+                    ) : <Rings
+                            height={100}
+                            width={100}
+                            color="#21BFDC"
+                            ariaLabel="Loading"
+                        />}
                     </tbody>
                 </table>
             </div>
