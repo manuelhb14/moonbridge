@@ -16,7 +16,7 @@ import multichainabi from "../constants/abis/multichainabi";
 
 export default function BridgeContainer() {
 
-    const { isConnected, setIsConnected, setAccount, from, to, token, amount, protocol, tokenInfo, setFrom, setTo, setToken, setAmount, setFees, setProtocol, setTokenInfo, isApproved, setIsApproved, fees } = useContext(DataContext);
+    const { isConnected, setIsConnected, setAccount, from, to, token, amount, protocol, tokenInfo, setFrom, setTo, setToken, setAmount, setFees, setProtocol, setTokenInfo, isApproved, setIsApproved, contractAddress, decimals, setContractAddress } = useContext(DataContext);
 
     const [buttonText, setButtonText] = useState("Connect");
     const [balance, setBalance] = useState(0);
@@ -25,7 +25,6 @@ export default function BridgeContainer() {
     useEffect(() => {
         window.ethereum.autoRefreshOnNetworkChange = false;
         window.ethereum.on('chainChanged', onChainChange);
-        console.log("listening chain changed events")
     }, []);
     
     useEffect(() => {
@@ -40,13 +39,13 @@ export default function BridgeContainer() {
     }, [isConnected, from, to, token, amount, protocol, tokenInfo, isApproved]);
 
     useEffect(() => {
-        if (token !== '' && tokenInfo && protocol !== '') {
+        if (token !== '' && contractAddress, decimals) {
             getTokenBalance();
         } else {
             setBalance(0);
         }
     }
-    , [token, from, tokenInfo, protocol, isPending]);
+    , [token, from, tokenInfo, contractAddress, decimals, isPending]);
 
     const checkAllowance = async () => {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -495,6 +494,7 @@ export default function BridgeContainer() {
         setProtocol('');
         setTokenInfo(null);
         setIsApproved(false);
+        setContractAddress('');
     }
 
     const connect = async () => {
@@ -586,31 +586,21 @@ export default function BridgeContainer() {
     const getTokenBalance = async () => {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
-        await console.log(tokenInfo);
-        if (from === tokenInfo.srcChainID) {
-            if (tokenInfo.SrcToken.ContractAddress) {
-                const contract = new ethers.Contract(tokenInfo.SrcToken.ContractAddress, erc20abi, signer);
+        if (contractAddress !== "None") {
+                const contract = new ethers.Contract(contractAddress, erc20abi, signer);
                 await contract.balanceOf(signer.getAddress()).then((balance) => {
-                    setBalance(ethers.utils.formatUnits(balance, tokenInfo.SrcToken.Decimals));
+                    setBalance(ethers.utils.formatUnits(balance, decimals));
+                    console.log(balance);
                 }
                 ).catch(error => {
                     console.log(error);
                 }
                 );
-            } else {
-                await signer.getBalance().then((balance) => {
-                    setBalance(ethers.utils.formatUnits(balance, 18));
-                }
-                ).catch(error => {
-                    console.log(error);
-                }
-                );
-            }
         } else {
-            const contract = new ethers.Contract(tokenInfo.DestToken.ContractAddress, erc20abi, signer);
-            await contract.balanceOf(signer.getAddress()).then((balance) => {
+            console.log("No contract address");
+            await signer.getBalance().then((balance) => {
+                setBalance(ethers.utils.formatUnits(balance, 18));
                 console.log(balance);
-                setBalance(ethers.utils.formatUnits(balance, tokenInfo.DestToken.Decimals));
             }
             ).catch(error => {
                 console.log(error);

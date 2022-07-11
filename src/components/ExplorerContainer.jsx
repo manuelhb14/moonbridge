@@ -48,7 +48,7 @@ export default function ExplorerContainer() {
                         return <tr key={item.txid}>
                             <td><NavLink to={`/tx/${item.txid}`}>{formatHash(item.txid)}</NavLink></td>
                             <td>{item.token}</td>
-                            <td>Sent: {item.formatvalue} <span className="spanexplorer ts-small"> <br />Received: {item.formatvalue}</span></td>
+                            <td>Sent: {item.formatvalue} <span className="spanexplorer ts-small"> <br />Received: {item.formatswapvalue}</span></td>
                             <td>{networks[item.srcChainId]}</td>
                             <td>{networks[item.destChainId]}</td>
                             <td>{formatDate(item.timestamp)} <span className="spanexplorer ts-small"><br />{getTimeAgo(item.timestamp)}</span></td>

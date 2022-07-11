@@ -8,7 +8,7 @@ import { DataContext } from "../context/DataContext";
 import erc20abi from "../constants/abis/erc20";
 
 export default function AvailableTokens() {
-    const { from, to, token, setToken, data, setProtocol, setIsApproved, setAmount } = useContext(DataContext);
+    const { from, to, token, setToken, data, setProtocol, setIsApproved, setAmount, setContractAddress, setDecimals } = useContext(DataContext);
 
     const [tokens, setTokens] = useState([]);
 
@@ -17,6 +17,7 @@ export default function AvailableTokens() {
         setProtocol('');
         setIsApproved(false);
         setAmount('');
+        setContractAddress('');
     }
 
     const getTokenBalance = async (tokenInfo) => {
@@ -75,6 +76,38 @@ export default function AvailableTokens() {
     }
     , [from, token, data]);
     
+
+    useEffect(() => {
+        if (data) {
+            let tokenDetails = '';
+            if (from !== process.env.REACT_APP_MOONBEAM_CHAIN_ID) {
+                tokenDetails = data.filter((item) => item.srcChainID === from && item.SrcToken.Symbol === token)[0];
+            } else {
+                tokenDetails = data.filter((item) => item.srcChainID === to && item.DestToken.Symbol === token)[0];
+            }
+            console.log(tokenDetails);
+            if (token !== '' && tokenDetails) {
+                if (from !== process.env.REACT_APP_MOONBEAM_CHAIN_ID) {
+                    if (tokenDetails.SrcToken.ContractAddress) {
+                        setContractAddress(tokenDetails.SrcToken.ContractAddress);
+                        setDecimals(tokenDetails.SrcToken.Decimals);
+                    } else {
+                        setContractAddress("None");
+                        setDecimals(18);
+                    }
+                } else {
+                    if (tokenDetails.DestToken.ContractAddress) {
+                        setContractAddress(tokenDetails.DestToken.ContractAddress);
+                        setDecimals(tokenDetails.DestToken.Decimals);
+                    } else {
+                        setContractAddress("None");
+                        setDecimals(18);
+                    }
+                }
+            }
+        }
+    }
+    , [from, to, token]);
 
     const customStyles = {
         container: () => ({

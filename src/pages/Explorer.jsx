@@ -12,21 +12,19 @@ export default function Explorer() {
     const { txInfo, setTxInfo } = useContext(DataContext);
 
     useEffect(() => {
-        const data = txResponse;
-        setTxInfo(data);
+        fetch("https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-41813a12-6cd0-49c0-abb9-68838a3e1f30/default/explorerTxns")
+            .then(res => res.json())
+            .then(data => {
+                data.sort((a, b) => {
+                    return new Date(b.timestamp) - new Date(a.timestamp);
+                }
+                );
+                console.log(data);
+                setTxInfo(data);
+            }
+            )
     }
     , []);
-
-    // useEffect(() => {
-    //     fetch("https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-41813a12-6cd0-49c0-abb9-68838a3e1f30/default/explorerTxns")
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             setTxInfo(data);
-    //         }
-    //         )
-    // }
-    // , []);
 
     return (
         <main className="explorer">

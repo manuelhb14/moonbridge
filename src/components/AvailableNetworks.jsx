@@ -12,7 +12,7 @@ import bscLogo from '../logos/bsc.svg';
 
 export default function AvailableNetworks({value}) {
 
-    const { isConnected, to, setTo, from, setFrom, setToken, setAmount, setFees, setProtocol, setTokenInfo, setIsApproved } = useContext(DataContext);
+    const { isConnected, to, setTo, from, setFrom, setToken, setAmount, setFees, setProtocol, setTokenInfo, setIsApproved, setContractAddress } = useContext(DataContext);
 
     const moonbeamChainID = process.env.REACT_APP_MOONBEAM_CHAIN_ID;
 
@@ -40,6 +40,7 @@ export default function AvailableNetworks({value}) {
         setProtocol('');
         setTokenInfo(null);
         setIsApproved(false);
+        setContractAddress('');
     }
 
     const onToChange = async (e) => {
@@ -52,6 +53,7 @@ export default function AvailableNetworks({value}) {
         setProtocol('');
         setTokenInfo(null);
         setIsApproved(false);
+        setContractAddress('');
     }
 
     const options = [
