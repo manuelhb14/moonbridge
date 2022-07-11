@@ -586,7 +586,7 @@ export default function BridgeContainer() {
     const getTokenBalance = async () => {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
-        if (contractAddress !== "None") {
+        if (contractAddress !== "None" && contractAddress) {
                 const contract = new ethers.Contract(contractAddress, erc20abi, signer);
                 await contract.balanceOf(signer.getAddress()).then((balance) => {
                     setBalance(ethers.utils.formatUnits(balance, decimals));
