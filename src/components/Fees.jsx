@@ -50,16 +50,43 @@ export default function Fees() {
         } else if (protocol === 'Multichain' && !isNaN(amount) && tokenInfo && amount > 0) {
             if (from !== process.env.REACT_APP_MOONBEAM_CHAIN_ID) {
                 console.log(4);
-                setFees(amount * (1 * tokenInfo.SrcToken.ContractInfo.SwapFeeRate));
-                setExpectedAmount(amount - fees);
+                let expAmount = amount * tokenInfo.SrcToken.ContractInfo.SwapFeeRate;
+                console.log(expAmount);
+                if (expAmount < tokenInfo.SrcToken.ContractInfo.MinimumSwapFee) {
+                    expAmount = amount - tokenInfo.SrcToken.ContractInfo.MinimumSwapFee;
+                    console.log("minimum " + expAmount);
+                } else if (expAmount > tokenInfo.SrcToken.ContractInfo.MinimunSwapFee && expAmount < tokenInfo.SrcToken.ContractInfo.MaximumSwapFee) {
+                    expAmount = amount * tokenInfo.SrcToken.ContractInfo.SwapFeeRate;
+                    console.log("middle " + expAmount);
+                } else {
+                    expAmount = amount - tokenInfo.SrcToken.ContractInfo.MaximumSwapFee;
+                    console.log("maximum " + expAmount);
+                }
+                setFees(amount - expAmount);
+                setExpectedAmount(expAmount);
             } else {
                 console.log(5);
-                setFees(amount * (1 * tokenInfo.DestToken.ContractInfo.SwapFeeRate));
-                setExpectedAmount(amount - fees);
+                let expAmount = amount * tokenInfo.DestToken.ContractInfo.SwapFeeRate;
+                console.log(tokenInfo.DestToken.ContractInfo.SwapFeeRate);
+                console.log(expAmount);
+                console.log(expAmount > tokenInfo.DestToken.ContractInfo.MinimunSwapFee);
+                console.log(expAmount < tokenInfo.DestToken.ContractInfo.MaximumSwapFee);
+                if (expAmount < tokenInfo.DestToken.ContractInfo.MinimumSwapFee) {
+                    expAmount = amount - tokenInfo.DestToken.ContractInfo.MinimumSwapFee;
+                    console.log("minimum" + expAmount);
+                } else if (expAmount > tokenInfo.DestToken.ContractInfo.MinimunSwapFee || expAmount < tokenInfo.DestToken.ContractInfo.MaximumSwapFee) {
+                    expAmount = amount * tokenInfo.DestToken.ContractInfo.SwapFeeRate;
+                    console.log("middle" + expAmount);
+                } else {
+                    expAmount = amount - tokenInfo.DestToken.ContractInfo.MaximumSwapFee;
+                    console.log("maximum" + expAmount);
+                }
+                setFees(amount - expAmount);
+                setExpectedAmount(expAmount);
             }
         } else {
             console.log(6);
-            setExpectedAmount(0);
+            setExpectedAmount(amount);
             setFees(0);
         }
     }
