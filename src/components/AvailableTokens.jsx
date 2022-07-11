@@ -56,7 +56,7 @@ export default function AvailableTokens() {
                 }
                 )
             );
-            console.log(tokens);
+            //console.log(tokens);
         } else {
             setTokens(data.filter((item) => item.srcChainID === to)
                 .filter((item, index, self) => self.findIndex(item2 => (item2.DestToken.Symbol === item.DestToken.Symbol)) === index)
@@ -70,7 +70,7 @@ export default function AvailableTokens() {
                 }
                 )
             );
-            console.log(tokens);
+            //console.log(tokens);
         }
     }
     , [from, token, data]);
