@@ -65,7 +65,7 @@ export default function Explorer() {
             </div>
          
             <div class="col-6 col-sm-3 card">
-            <div class="card-content"><span className="ts-sec"> Volume </span><br/> <span className="ts-subtitle">{(stats.total / 1000000).toFixed(2)}</span><span className="spancard ts-main"> / 365 days</span></div>
+            <div class="card-content"><span className="ts-sec"> Volume </span><br/> <span className="ts-subtitle">{(stats.total / 1000000).toFixed(2)} M</span><span className="spancard ts-main"> / 365 days</span></div>
             </div>
             <div class="col-6 col-sm-3 card">
             <div class="card-content"><span className="ts-sec"> Av. Bridge Time </span><br/> <span className="ts-subtitle">{ stats.waitTime }</span><span className="spancard ts-main"> min</span></div>
