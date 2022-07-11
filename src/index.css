@@ -79,7 +79,7 @@ main.explorer { overflow: auto; }
 
 /** Navbar **/
 nav.navbar { color: var(--lightblue); font-size: var(--ts-nav); display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 0.75rem 3.5rem; position: absolute; left: 0; right: 0; }
-nav.navbar .moonbeam-full { width: 10rem; height: auto; }
+nav.navbar .moonbeam-full { width: 10rem; height: auto; z-index: 10; }
 nav .nav-items { display: flex; justify-content: flex-end; align-items: center; align-content: center; flex-wrap: wrap; gap: 2rem; flex-direction: row; }
 nav .nav-items ul { padding: 0; margin: 0; list-style: none; display: flex; gap: 2rem; align-items: center; flex-direction: row; }
 nav .nav-items ul li a { color: inherit; text-decoration: none; display: flex; align-items: center; gap: .25rem; transition: 0.5s; }
@@ -147,7 +147,7 @@ nav .account .account.dropdown .dropdown-menu a { color: var(--pink); justify-co
   .button-a { padding: 0.25rem 0.7rem; }
 
   nav.navbar { padding: 0.75rem 1.5rem; font-size: 1rem; gap: 0; }
-  nav.navbar .moonbeam-full { width: 7.5rem; height: auto; }
+  nav.navbar .moonbeam-full { width: 7.5rem; height: auto; z-index: 10; }
   nav .nav-items { gap: 1rem; }
 
   :root {
