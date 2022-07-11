@@ -89,7 +89,7 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <NavLink to="/" className="logo">
-                <img className="moonbeam-full" src="assets/imgs/logos/moonbeam-full.png" alt="Moonbeam logo" />
+                <img className="moonbeam-full" src="assets/imgs/logos/moonbridge-full.png" alt="Moonbridge logo" />
             </NavLink>
             <div className="nav-items">
                 <ul>
