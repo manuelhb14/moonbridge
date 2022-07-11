@@ -596,7 +596,7 @@ export default function BridgeContainer() {
                     console.log(error);
                 }
                 );
-        } else {
+        } else if (contractAddress === "None") {
             console.log("No contract address");
             await signer.getBalance().then((balance) => {
                 setBalance(ethers.utils.formatUnits(balance, 18));
@@ -606,6 +606,8 @@ export default function BridgeContainer() {
                 console.log(error);
             }
             );
+        } else {
+            setBalance("0");
         }
     }
 
