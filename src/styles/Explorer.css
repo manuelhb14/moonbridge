@@ -11,9 +11,14 @@
 /* Bottom parts */
 .bottom-explorer-section{  background-color:  var(--darkblue); border-top: 1px solid var(--lightblue); text-align: center; padding-top: 1.5rem; padding-bottom: 1.5rem; }
 .bottom-detail-section{ background-color:  var(--darkblue); border-top: 1px solid var(--lightblue); text-align:center; padding-top: 1.5rem; padding-bottom: 1.5rem; }
-.explorer-table-div{ padding-left: 7rem; padding-right: 7rem; }
-.detail-table-div{ padding-left: 7rem; padding-right: 7rem; }
-
+.explorer-table-div{padding-top: 1.5rem; padding-left: 7rem; padding-right: 7rem; }
+.detail-table-div{  padding-left: 7rem; padding-right: 7rem; }
+/* Cards parts */
+.cards-div{padding-top: 1rem; padding-left: 7.75rem; padding-right: 7.75rem; }
+.cards{background: rgb(7,14,45); background: linear-gradient(90deg, rgba(7,14,45,1) 0%, rgba(31,39,78,1) 100%);}
+.card{padding-top:1rem;padding-bottom: 1rem;  border: 1px solid var(--lightblue); background: none;}
+.card-content{padding-left: 1rem;text-align: left;color: var(--lightblue);}
+.logo{width: 30px;}
 .detail-a { color: var(--lightblue); }
 .detail-a:hover { color: var(--white); transition: 0.3s;}
 
@@ -21,6 +26,7 @@
 .explorer tbody{  background-color: var(--greyblue); color: var(--white); text-align: center; font-size: var(--ts-sec); }
 .explorer td{ padding: 1rem; }
 .spanexplorer{ color: var(--lightblue); }
+.spancard{ color: var(--white); }
 
 table.table.explorer { margin-bottom: 0; }
 .table-responsive { border-radius: 0.25rem; border: 1px solid var(--lightblue); }
@@ -40,6 +46,7 @@ thead, thead >tr:last-child {
     border: none;
 
 }
+
 
 
 /* TRANSACTION DETAILS */
@@ -94,6 +101,7 @@ thead, thead >tr:last-child {
         padding-left: 5rem;
         padding-right: 5rem;
     }
+    .cards-div{padding-left: 5.75rem; padding-right: 5.75rem; }
     .detail-table-div{
         padding-left: 5rem;
         padding-right: 5rem;
@@ -125,6 +133,7 @@ thead, thead >tr:last-child {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
+    .cards-div{padding-left: 3.25rem; padding-right: 3.25rem; }
     .detail-table-div{
         padding-left: 2.5rem;
         padding-right: 2.5rem;
@@ -165,6 +174,7 @@ thead, thead >tr:last-child {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+    .cards-div{padding-left: 2.75rem; padding-right: 2.75rem; }
     .detail-table-div{
         padding-left: 2rem;
         padding-right: 2rem;
