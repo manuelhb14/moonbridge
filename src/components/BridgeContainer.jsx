@@ -677,7 +677,7 @@ export default function BridgeContainer() {
                 </div>
             ) : (
                 <div className="button">
-                    <button id="transfer-btn-disabled" onClick={connect}>{buttonText}</button>
+                    <button id="transfer-btn" onClick={connect}>{buttonText}</button>
                 </div>
             )}
             </div>
