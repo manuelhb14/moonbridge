@@ -39,7 +39,7 @@ export default function Explorer() {
             </div>
             <div className="bottom-explorer-section">
             <div class="cards-div">
-            <div class="row align-items-center cards">
+            <div class="row cards">
             <div class="col-6 col-sm-3 card">
             <div class="row align-items-center">
                 <div class="col-2 col-sm-2 "><img className="logo" src="assets/imgs/logos/moonbeam.png" ></img></div>

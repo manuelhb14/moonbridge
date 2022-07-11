@@ -1,5 +1,5 @@
 .top-explorer-section{ background-image: url(/public/assets/imgs/background.png); background-size: cover; background-position: bottom; background-repeat: no-repeat; text-align: center; padding-top: 4rem; padding-bottom: 3rem; height: 220px;}
-.container-searchbar{ align-content: center; width: 45%; margin-left: auto; margin-right: auto; }
+.container-searchbar{ align-content: center; width: 45%; margin-left: auto; margin-right: auto;}
 .input:focus { outline: none; }
 .form-control{ background-color: var(--darkblue); border-color: var(--lightblue); padding-left: 1rem; border-radius: 0.25rem 0rem 0rem 0.25rem; }
 .form-control::placeholder{ font-size: var(--ts-small); color: var(--lightblue); font-size: var(--ts-sec); }
@@ -15,8 +15,9 @@
 .detail-table-div{  padding-left: 7rem; padding-right: 7rem; }
 /* Cards parts */
 .cards-div{padding-top: 1rem; padding-left: 7.75rem; padding-right: 7.75rem; }
-.cards{background: rgb(7,14,45); background: linear-gradient(90deg, rgba(7,14,45,1) 0%, rgba(31,39,78,1) 100%);}
-.card{padding-top:1rem;padding-bottom: 1rem;  border: 1px solid var(--lightblue); background: none;}
+.cards{background: rgb(7,14,45); background: linear-gradient(90deg, rgba(7,14,45,1) 0%, rgba(31,39,78,1) 100%);border: 1px solid var(--lightblue); border-radius: 0.25rem;}
+.card{padding-top:1rem;padding-bottom: 1rem;  border-right: 1px solid var(--lightblue); background: none; border-radius: 0%;}
+.card:nth-child(4){border-right: 0px;}
 .card-content{padding-left: 1rem;text-align: left;color: var(--lightblue);}
 .logo{width: 30px;}
 .detail-a { color: var(--lightblue); }
@@ -175,6 +176,9 @@ thead, thead >tr:last-child {
         padding-right: 2rem;
     }
     .cards-div{padding-left: 2.75rem; padding-right: 2.75rem; }
+    .card{ border-top: 1px solid var(--lightblue);}
+    .card:nth-child(2){border-right: 0px;border-top: 0px}
+    .card:nth-child(1){border-top: 0px}
     .detail-table-div{
         padding-left: 2rem;
         padding-right: 2rem;
