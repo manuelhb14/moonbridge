@@ -79,7 +79,7 @@ export default function AvailableTokens() {
     const customStyles = {
         container: () => ({
             flex: '0 0 50%',
-
+            textAlign: 'right',
         }),
         option: (provided, state) => ({
             ...provided,
