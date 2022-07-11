@@ -89,15 +89,15 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <NavLink to="/" className="logo">
-                <img className="moonbeam-full" src="assets/imgs/logos/moonbridge-full.png" alt="Moonbridge logo" />
+                <img className="moonbeam-full" src="/assets/imgs/logos/moonbridge-full.png" alt="Moonbridge logo" />
             </NavLink>
             <div className="nav-items">
                 <ul>
                     <li>
-                        <NavLink to="/bridge" onClick={closeNav} className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge < img className="icon" src="assets/icons/arrow.svg" alt="arrow " />  </NavLink>
+                        <NavLink to="/bridge" onClick={closeNav} className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Bridge < img className="icon" src="/assets/icons/arrow.svg" alt="arrow " />  </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/explorer" onClick={closeNav} className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Explorer < img className="icon" src="assets/icons/arrow.svg" alt="arrow " /> </NavLink>
+                        <NavLink to="/explorer" onClick={closeNav} className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Explorer < img className="icon" src="/assets/icons/arrow.svg" alt="arrow " /> </NavLink>
                     </li>
                     <li>
                         <NavLink to="/" onClick={closeNav} className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Product </NavLink>

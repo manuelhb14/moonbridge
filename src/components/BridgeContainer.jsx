@@ -16,7 +16,7 @@ import multichainabi from "../constants/abis/multichainabi";
 
 export default function BridgeContainer() {
 
-    const { isConnected, setIsConnected, setAccount, from, to, token, amount, protocol, tokenInfo, setFrom, setTo, setToken, setAmount, setFees, setProtocol, setTokenInfo, isApproved, setIsApproved, contractAddress, decimals, setContractAddress } = useContext(DataContext);
+    const { isConnected, setIsConnected, setAccount, from, to, token, amount, protocol, tokenInfo, setFrom, setTo, setToken, setAmount, setFees, setProtocol, setTokenInfo, isApproved, setIsApproved, contractAddress, decimals, setContractAddress, fees } = useContext(DataContext);
 
     const [buttonText, setButtonText] = useState("Connect");
     const [balance, setBalance] = useState(0);
@@ -654,7 +654,7 @@ export default function BridgeContainer() {
             <div className="bridge-item">
             {isConnected ? (
                 <div className="button">
-                    {from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '' && amount > 0  ? (
+                    {from !== '' && to !== '' && token !== '' && amount !== '' && protocol !== '' && amount > 0 && amount <= balance && amount > fees ? (
                         <div className="convert">
                             { isApproved ? (
                                 <button id={ !isPending ? "transfer-btn" : "transfer-btn-disabled" } onClick={transfer}>{buttonText}</button>
