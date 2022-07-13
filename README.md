@@ -1,11 +1,12 @@
 # Moonbridge
 
 [*Project for Polkadot Hackathon: North America Edition*](https://devpost.com/software/moonbridge)
+
 The ultimate Moonbeam bridge and explorer. Bridge multichain assets and see your transactions all in one place.
 
 ## How Moonbridge works
 
-Moonbridge is a **bridge** and **explorer** for **multichain assets**. It allows you to **send** and **monitor** your **transactions** in a simple and easy to use interface. Select your **source** and **destination chains**, then select the **asset** you want to swap and the **protocol** that best fits your needs. Sometimes protocols have **lower fees** depending on the **amount of tokens** you send. After you send your transaction, Moonbridge will monitor the transaction and show you the **status** of your transaction in the **explorer**.
+Moonbridge is a [**bridge**](https://moonbridge.network/bridge) and [**explorer**](https://moonbridge.network/explorer) for **multichain assets**. It allows you to **send** and **monitor** your **transactions** in a simple and easy to use interface. Select your **source** and **destination chains**, then select the **asset** you want to swap and the **protocol** that best fits your needs. Sometimes protocols have **lower fees** depending on the **amount of tokens** you send. After you send your transaction, Moonbridge will monitor the swap and show you the details in the **explorer** including its **status** [Example](https://moonbridge.network/tx/0xe1656854470f9dc2120b4ed0a95fd6526abc6a1a316326f727ad3747369b6de4).
 
  Supported bridges:
 
