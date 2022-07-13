@@ -5,10 +5,16 @@ import { DataContext } from '../context/DataContext';
 
 import ethLogo from '../logos/eth.svg';
 import avalancheLogo from '../logos/avalanche.svg';
-import moonbeamLogo from '../logos/moonbeam.png';
+import moonbeamLogo from '../logos/moonbeam.svg';
 import optimismLogo from '../logos/optimism.svg';
 import polygonLogo from '../logos/polygon.svg';
 import bscLogo from '../logos/bsc.svg';
+import cronosLogo from '../logos/cronos.svg';
+import fantomLogo from '../logos/fantom.svg';
+import bobaLogo from '../logos/boba.svg';
+import metisLogo from '../logos/metis.svg';
+import moonriverLogo from '../logos/moonriver.svg';
+import arbitrumLogo from '../logos/arbitrum.svg';
 
 export default function AvailableNetworks({value}) {
 
@@ -59,14 +65,14 @@ export default function AvailableNetworks({value}) {
     const options = [
         { value: '1', label: "Ethereum", image: ethLogo },
         { value: '10', label: "Optimism", image: optimismLogo },
-        { value: '25', label: "Cronos", image: ethLogo },
+        { value: '25', label: "Cronos", image: cronosLogo },
         { value: '56', label: "Binance Smart Chain", image: bscLogo },
         { value: '137', label: "Polygon", image: polygonLogo },
         { value: '250', label: "Fantom", image: ethLogo },
-        { value: '288', label: "Boba", image: ethLogo },
-        { value: '1088', label: "Metis", image: ethLogo },
-        { value: '1285', label: "Moonriver", image: ethLogo },
-        { value: '42161', label: "Arbitrum", image: ethLogo },
+        { value: '288', label: "Boba", image: bobaLogo },
+        { value: '1088', label: "Metis", image: metisLogo },
+        { value: '1285', label: "Moonriver", image: moonriverLogo },
+        { value: '42161', label: "Arbitrum", image: arbitrumLogo },
         { value: '43114', label: "Avalanche", image: avalancheLogo }
     ];
 
