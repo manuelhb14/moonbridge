@@ -1,10 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import SupportedBlockchains from "../components/SupportedBlockchains";
 
 export default function Home() {
 
     return (
-        <main>
+        <div>
+            <main>
             <div className="container">
                 <div className="home">
                     <p className="ts-big-title">The ultimate Moonbeam bridge and explorer</p>
@@ -16,6 +18,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                
                 {/* <div className="container text-center">
                     <p className="ts-big-title">Pruebas de Texto</p>
                     <p className="ts-title">Moonbeam Token Bridge</p>
@@ -25,5 +28,8 @@ export default function Home() {
                 </div> */}
             </div>
         </main>
+        <SupportedBlockchains />
+        </div>
+        
     )
 }
