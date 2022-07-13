@@ -154,7 +154,7 @@ export default function BridgeContainer() {
                                 <div>
                                     Transfer succesful.
                                 </div>
-                                <NavLink to={`/tx/${tx.transactionHash}`}> View on explorer </NavLink> 
+                                <NavLink to={`/tx/${tx.transactionHash}`} className="t-lightblue"> View on explorer </NavLink> 
                                 </div>,
                             type: "success",
                             isLoading: false,
@@ -201,7 +201,7 @@ export default function BridgeContainer() {
                                 <div>
                                     Transfer succesful.
                                 </div>
-                                <NavLink to={`/tx/${tx.transactionHash}`}> View on explorer </NavLink> 
+                                <NavLink to={`/tx/${tx.transactionHash}`} className="t-lightblue"> View on explorer </NavLink> 
                                 </div>,
                             type: "success",
                             isLoading: false,
@@ -250,7 +250,7 @@ export default function BridgeContainer() {
                             <div>
                                 Transfer succesful.
                             </div>
-                            <NavLink to={`/tx/${tx.transactionHash}`}> View on explorer </NavLink> 
+                            <NavLink to={`/tx/${tx.transactionHash}`} className="t-lightblue"> View on explorer </NavLink> 
                             </div>,
                         type: "success",
                         isLoading: false,
@@ -376,7 +376,7 @@ export default function BridgeContainer() {
                                 <div>
                                     Transfer succesful.
                                 </div>
-                                <NavLink to={`/tx/${tx.transactionHash}`}> View on explorer </NavLink> 
+                                <NavLink to={`/tx/${tx.transactionHash}`} className="t-lightblue"> View on explorer </NavLink> 
                                 </div>,
                             type: "success",
                             isLoading: false,
@@ -445,7 +445,7 @@ export default function BridgeContainer() {
                             <div>
                                 Transfer succesful.
                             </div>
-                            <NavLink to={`/tx/${tx.transactionHash}`}> View on explorer </NavLink> 
+                            <NavLink to={`/tx/${tx.transactionHash}`} className="t-lightblue"> View on explorer </NavLink> 
                             </div>,
                         type: "success",
                         isLoading: false,
