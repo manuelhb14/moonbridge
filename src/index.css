@@ -11,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main.explorer { overflow: auto; }
 
 :root {
   /* Colors */

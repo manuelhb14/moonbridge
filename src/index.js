@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './styles/Home.css';
 import './styles/Explorer.css';
-import './styles/Bridge.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { DataProvider } from './context/DataContext';

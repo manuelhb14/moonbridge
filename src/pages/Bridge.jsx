@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import { ethers } from "ethers";
 
+import '../styles/Bridge.css';
+
 import erc20abi from "../constants/abis/erc20";
 import multichainabi from "../constants/abis/multichainabi";
 
