@@ -102,7 +102,7 @@ export default function Navbar() {
                         <NavLink to="/" onClick={closeNav} className={({ isActive }) => ( isActive ? 'active' : 'inactive') } > Product </NavLink>
                     </li>
                     <li>
-                        <a href="https://github.com/manuelhb14/moonbeam-bridge-aggregator" onClick={closeNav}> Docs </a>
+                        <a href="https://github.com/manuelhb14/moonbeam-bridge-aggregator" onClick={closeNav} target="_blank" rel="noopener noreferrer"> Docs </a>
                     </li>
                 </ul>
                 <div className="account">
