@@ -9,12 +9,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
 }
 
-main { background-image: url(../public/assets/imgs/background.png); height: 100vh; background-position: center; background-size: cover; background-repeat: no-repeat; }
-
-main.explorer { overflow: auto; }
 
 :root {
   /* Colors */
@@ -56,8 +52,8 @@ main.explorer { overflow: auto; }
 
 /* Text size */
 .ts-nav { font-size: var(--ts-nav); }
-.ts-big-title { font-size: var(--ts-big-title); color: var(--lightblue); font-weight: var(--bold); text-align: center; }
-.ts-title { font-size: var(--ts-title); color: var(--lightblue); font-weight: var(--bold); text-align: center; }
+.ts-big-title { font-size: var(--ts-big-title); color: var(--lightblue); font-weight: var(--bold); }
+.ts-title { font-size: var(--ts-title); color: var(--lightblue); font-weight: var(--bold); }
 .ts-subtitle { font-size: var(--ts-subtitle); color: var(--lightblue); font-weight: var(--bold); }
 .ts-tertiary { font-size: var(--ts-tertiary); }
 .ts-main { font-size: var(--ts-main); }
@@ -69,7 +65,7 @@ main.explorer { overflow: auto; }
 .button-a { border: 1px solid var(--lightblue); color: var(--lightblue); background-color: transparent; border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem; -webkit-box-shadow: 0px 0px 5px 3px rgba(33,191,220,0.45); box-shadow: 0px 0px 5px 0px rgba(33,191,220,0.4); outline: none!important; text-decoration: none; }
 .button-a:hover, .button-b:hover, .button-c:hover, .button-d:hover, .button-e:hover { color: var(--white); transition: 0.3s;}
 .button-a .icon { height: var(--arrow-regular); filter: var(--filter-blue); transition: 0.5s; }
-.button-b { border: 1px solid rgba(241, 241, 241, 0.15); color: var(--white); background-color: var(--pink); border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem; -webkit-box-shadow: 0px 0px 15px 3px rgba(225,20,123,0.65); box-shadow: 0px 0px 10px 0px rgba(225,20,123,0.65); text-decoration: none; }
+.button-b { border: 1px solid rgba(241, 241, 241, 0.15); color: var(--white); background-color: var(--pink); border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem; -webkit-box-shadow: 0px 0px 15px 3px rgba(225,20,123,0.65); box-shadow: 0px 0px 10px 0px rgba(225,20,123,0.65); text-decoration: none; outline: none; }
 .button-b:hover { background-color: var(--darkpink); transition: 0.3s;}
 .button-c { border: 1px solid var(--lightblue); color: var(--lightblue); background-color: var(--greyblue); border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem; text-decoration: none; }
 .button-d { border: none; color: var(--white); background-color: var(--greyblue); border-radius: 5px; /* font-size: var(--button-text-size); */ padding: 0.4rem 0.9rem; text-decoration: none; }

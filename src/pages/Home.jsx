@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import SupportedBlockchains from "../components/SupportedBlockchains";
+import WhyMoonbridge from "../components/WhyMoonbridge";
+import SupportedTokens from "../components/SupportedTokens";
 
 export default function Home() {
 
@@ -10,8 +12,8 @@ export default function Home() {
             <div className="container">
                 <div className="home">
                     <p className="ts-big-title">The ultimate Moonbeam bridge and explorer</p>
-                    <p className="ts-tertiary t-center t-white">Bridge multichain assets in the Moonbeam aggregator. Enter the explorer of transactions within the ecosystem.</p>
-                    <div className="t-center parent-button-container">
+                    <p className="ts-tertiary t-white">Bridge multichain assets in the Moonbeam aggregator. Enter the explorer of transactions within the ecosystem.</p>
+                    <div className="parent-button-container">
                         <div className="home-button-container">
                             <NavLink to="/bridge" className="button-b ts-tertiary t-center t-white">Launch bridge</NavLink>
                             <NavLink to="/explorer" className="button-a ts-tertiary t-center t-lightblue">Explorer</NavLink>
@@ -29,6 +31,9 @@ export default function Home() {
             </div>
         </main>
         <SupportedBlockchains />
+        <WhyMoonbridge />
+        <SupportedTokens />
+
         </div>
         
     )
