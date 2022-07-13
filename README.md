@@ -1,73 +1,45 @@
-# Moonbeam Bridge Aggregator
+# Moonbridge
 
-Moonbeam Bridge Aggregator project for Polkadot Hackathon: North America Edition. Supported bridges include:
+[*Project for Polkadot Hackathon: North America Edition*](https://devpost.com/software/moonbridge)
+The ultimate Moonbeam bridge and explorer. Bridge multichain assets and see your transactions all in one place.
+
+## How Moonbridge works
+
+Moonbridge is a **bridge** and **explorer** for **multichain assets**. It allows you to **send** and **monitor** your **transactions** in a simple and easy to use interface. Select your **source** and **destination chains**, then select the **asset** you want to swap and the **protocol** that best fits your needs. Sometimes protocols have **lower fees** depending on the **amount of tokens** you send. After you send your transaction, Moonbridge will monitor the transaction and show you the **status** of your transaction in the **explorer**.
+
+ Supported bridges:
 
 - [Multichain (Anyswap)](https://app.multichain.org/#/router) - [API](https://github.com/anyswap/CrossChain-Bridge/wiki/CrossChain-Bridge-API#restful-api-reference)
+- [Synapse Protocol](https://synapseprotocol.com/) - [API](https://syn-api-x.herokuapp.com/apidoc/#api-_header)
+- [*Axelar Network (Work in progress)*](https://satellite.money/) - [SDK](https://docs.axelar.dev/dev/axelarjs-sdk/token-transfer-dep-addr) - [Explorer API](https://github.com/synapsecns/explorer-api)
 
-## [Session 1: Building Cross-Chain DApps with XC-20s](https://www.crowdcast.io/e/polkadot-hackathon/1)
-
-TODO: Add session 1 timestamps
-
-## [Session 2: Bridging the Multichain Future](https://www.crowdcast.io/e/polkadot-hackathon)
-
-TODO: Add session 1 timestamps
-Useful timestamps:
-00:00 - Introduction
-
-01:27 - Start
-
-02:53 - Approaches to Bridging
-
-07:14 - Moonbeam Approach
-
-**09:39 - Bridge Aggregator**
-
-12:50 - Cross-Chain Bridge Txn Explorer
-
-13:46 - Cross-Chain Explorer [Example](https://anyswap.net/)
-
-**15:31 - Working with the [Synapse API](https://syn-api-x.herokuapp.com/apidoc)**
-
-**22:31 - Working with the [Multichain API](https://github.com/anyswap/CrossChain-Bridge/wiki/Bridge-api-for-frontend)**
-
-28:32 - Build a XCM Explorer [(more info)](https://www.crowdcast.io/e/polkadot-hackathon/1)
-
-31:25 - Build a XCM-related Tool
-
-### [Hackathon Prizes & Challenges](https://angelhack.notion.site/Polkadot-Hackathon-North-America-Edition-Participants-Guide-0f6d16e7db4849a9a4902241f0d4a5cf#7760e9aa3f5f4c8f90869504db40c665)
-
-### [Moonbeam Challenges](https://angelhack.notion.site/Polkadot-Hackathon-North-America-Edition-Participants-Guide-0f6d16e7db4849a9a4902241f0d4a5cf#7760e9aa3f5f4c8f90869504db40c665)
-
-## Potential Supported Bridges
+## Future Supported Bridges
 
 - [Nomad](https://app.nomad.xyz/) - [SDK](https://docs.nomad.xyz/dev/sdk.html)
-- [Multichain (Anyswap)](https://app.multichain.org/#/router) - [API](https://github.com/anyswap/CrossChain-Bridge/wiki/CrossChain-Bridge-API#restful-api-reference)
 - [Connext](https://bridge.connext.network/?sendingChainId=1284) - [SDK](https://docs.connext.network/developers/sdk/sdk-quickstart)
-- [Satellite](https://satellite.money/?source=moonbeam) - [SDK](https://docs.axelar.dev/dev/axelarjs-sdk/intro)
-- [Synapse Protocol](https://synapseprotocol.com/) - [API](https://syn-api-x.herokuapp.com/apidoc/#api-_header)
 - [Meter Passport](https://passport.meter.io/#/) - [API](https://github.com/meterio/meterify#web3-method-supported)
 
-**[Useful bridge endpoints (Postman)](https://go.postman.co/workspace/Moonbeam-Bridge-Aggregator~68b21d5c-33c0-462c-a0a8-76f1cb33b699/collection/8082526-857baefb-97e3-46a8-bff9-b11cae311bf2)**
+## Future for Moonbridge
 
-## Examples
+- Currently working on adding Axelar Network to the list of supported bridges.
+- Bridge and swap tokens in one transaction.
+- Add WalletConnect and SubWallet support.
+- Add unit and integration tests.
+- Add XCM transfer support between parachains and relay chain.
+- Select the protocol with the lowest fees for the transaction.
+- Add all your token balances to the token selector.
 
-- [Avalanche Bridge](https://bridge.avax.network/)
+## Contribute to the project
 
-## Useful Information
+Run the server in your local machine:
 
-- Moonbeam Chain ID: 1284
-- [Synapse Supported Chains](https://github.com/synapsecns/sdk/blob/master/src/common/chainid.ts#L1)
-- [List of Chains](https://chainlist.org/)
+```bash
+npm install
 
-## Requirements
+npm start
+```
 
-- Bridge must be FROM and TO Moonbeam
+Open <http://localhost:3000> with your browser to see the result.
 
-## Future Plans
 
-- Add more bridges
-- Token swap support
-- Add useful popup alerts
-- Add other wallets
-- Add unit testing
-- Show fees for every bridge
+***Moonbridge is in Beta. Use at your own risk with funds you're comfortable using.***
