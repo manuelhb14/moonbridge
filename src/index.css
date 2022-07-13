@@ -141,6 +141,7 @@ footer p { color: white; font-size: .8rem; }
     --ts-sec: 0.875rem;
     --ts-small: 0.845rem;
   }
+  footer img { width: 40%; }
 }
 
 
