@@ -488,7 +488,6 @@ export default function BridgeContainer() {
 
         } else {
             setFrom(chain);
-            setTo("1");
         }
         setToken('');
         setAmount('');

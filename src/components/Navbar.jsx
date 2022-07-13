@@ -4,7 +4,7 @@ import { NavLink, Router, Routes, Route } from "react-router-dom";
 
 export default function Navbar() {
 
-    const { isConnected, setIsConnected, account, setAccount, setToken, setAmount, setFees, setProtocol, setTokenInfo, setIsApproved, setFrom, setTo } = useContext(DataContext);
+    const { isConnected, setIsConnected, account, setAccount, setToken, setAmount, setFees, setProtocol, setTokenInfo, setIsApproved, setFrom, setTo, from } = useContext(DataContext);
 
     const onChainChange = (chainId) => {
         // returns hex value of the chain
@@ -16,7 +16,6 @@ export default function Navbar() {
 
         } else {
             setFrom(chain);
-            setTo("1");
         }
         setToken('');
         setAmount('');
