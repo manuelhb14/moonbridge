@@ -68,7 +68,7 @@ export default function AvailableNetworks({value}) {
         { value: '25', label: "Cronos", image: cronosLogo },
         { value: '56', label: "Binance Smart Chain", image: bscLogo },
         { value: '137', label: "Polygon", image: polygonLogo },
-        { value: '250', label: "Fantom", image: ethLogo },
+        { value: '250', label: "Fantom", image: fantomLogo },
         { value: '288', label: "Boba", image: bobaLogo },
         { value: '1088', label: "Metis", image: metisLogo },
         { value: '1285', label: "Moonriver", image: moonriverLogo },
