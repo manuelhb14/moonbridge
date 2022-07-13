@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { ethers } from "ethers";
+
 import { DataContext } from "../context/DataContext";
+
+import chainInfo from "../constants/chainInfo";
 
 export default function SwapNetwork() {
 
@@ -18,9 +21,21 @@ export default function SwapNetwork() {
                 method: 'wallet_switchEthereumChain',
                 params: [{ chainId: hexId }]
             }).catch(error => {
-                console.log(error);
-                setFrom(oldFrom);
-                setTo(oldTo);
+                if (error.code === 4902) {
+                    window.ethereum.request({
+                            method: 'wallet_addEthereumChain',
+                            params: [chainInfo[hexId]]
+                    }).catch(error => {
+                        console.log(error);
+                        setFrom(oldFrom);
+                        setTo(oldTo);
+                    }
+                    ); 
+                } else {
+                    console.log(error);
+                    setFrom(oldFrom);
+                    setTo(oldTo);
+                }
             }
             );
         } else {

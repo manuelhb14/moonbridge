@@ -3,6 +3,8 @@ import Select from 'react-select';
 import { ethers } from "ethers";
 import { DataContext } from '../context/DataContext';
 
+import chainInfo from '../constants/chainInfo';
+
 import ethLogo from '../logos/eth.svg';
 import avalancheLogo from '../logos/avalanche.svg';
 import moonbeamLogo from '../logos/moonbeam.svg';
@@ -24,7 +26,6 @@ export default function AvailableNetworks({value}) {
 
     const onFromChange = async (e) => {
         if (isConnected) {
-            const oldFrom = from;
             setFrom(e.value);
             console.log(e.value);
             const hexId = ethers.utils.hexValue(ethers.utils.hexlify(parseInt(e.value)));
@@ -33,8 +34,17 @@ export default function AvailableNetworks({value}) {
                 method: 'wallet_switchEthereumChain',
                 params: [{ chainId: hexId }]
             }).catch(error => {
-                console.log(error);
-                setFrom(oldFrom);
+                if (error.code === 4902) {
+                    window.ethereum.request({
+                            method: 'wallet_addEthereumChain',
+                            params: [chainInfo[hexId]]
+                    }).catch(error => {
+                        console.log(error);
+                    }
+                    ); 
+                } else {
+                    console.log(error);
+                }
             }
             );
         } else {
