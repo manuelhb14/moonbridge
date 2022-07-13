@@ -106,6 +106,14 @@ nav .account .account.dropdown:hover .dropdown-menu { display: block; margin: 0;
 nav .account .account.dropdown .dropdown-menu a { color: var(--pink); justify-content: center; text-align: center; display: block; border: 1px solid var(--pink); border-radius: 5px; padding: 0.4rem 0; text-decoration: none; }
 
 
+/****Footer****/
+
+footer { background-color: var(--greyblue); padding: 3rem 0; }
+footer img { width: 15%; display: block; margin-bottom: .5rem; }
+footer p { color: white; font-size: .8rem; }
+
+
+
 /**********Large (lg)**********/
 @media (max-width: 1199.98px) {}
 

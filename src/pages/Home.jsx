@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import SupportedBlockchains from "../components/SupportedBlockchains";
 import WhyMoonbridge from "../components/WhyMoonbridge";
 import SupportedTokens from "../components/SupportedTokens";
+import Footer from "../components/Footer";
 
 export default function Home() {
 
@@ -33,6 +34,7 @@ export default function Home() {
         <SupportedBlockchains />
         <WhyMoonbridge />
         <SupportedTokens />
+        <Footer />
 
         </div>
         
